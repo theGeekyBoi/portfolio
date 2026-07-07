@@ -1,4 +1,4 @@
-# Aaditya Sharma — Portfolio
+# Aaditya Sharma - Portfolio
 
 Personal portfolio built with **Next.js (App Router) + TypeScript + Tailwind CSS + Framer Motion**. Dark, minimal, and fully content-driven: every fact on the site lives in plain data files under [`content/`](content/), so updating it never requires touching a component.
 
