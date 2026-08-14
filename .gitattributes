@@ -1,6 +1,7 @@
 # Treat binary assets as binary so Git never applies line-ending (CRLF/LF)
 # conversion, which would corrupt them (e.g. break a PDF's byte offsets).
 *.pdf   binary
+*.pptx  binary
 *.png   binary
 *.jpg   binary
 *.jpeg  binary

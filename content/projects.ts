@@ -152,6 +152,56 @@ export const projects: Project[] = [
   },
   // --------------------------------------------------------------------------
   {
+    slug: "birdseye",
+    title: "BirdsEye",
+    subtitle: "Vision-based autonomous rover, sim-to-real",
+    featured: true,
+    tags: ["Robotics", "ML", "Embedded", "Research"],
+    role: "Team Lead & Lead Programmer",
+    dates: "Spring 2026 · ECE 4524",
+    summary:
+      "An autonomous rover that navigates to a target using only an overhead camera — a Double DQN trained in simulation and transferred to physical hardware via a custom computer-vision perception pipeline.",
+    metrics: [
+      { value: "100%", label: "sim-to-real success rate (50/50 episodes)" },
+      { value: "22-dim", label: "state vector from vision alone" },
+    ],
+    highlights: [
+      "Led a 5-person team as Team Lead and Lead Programmer — owning the PyGame reinforcement-learning environment, the Double DQN, and the integration of the trained model into the physical rover.",
+      "Computer-vision perception pipeline — dual-range HSV masking, contour and min-area-rect fitting, and a white-tape heading marker reconstruct a 22-dimensional state (car corners, heading, target position, wall distances) from a raw 1920×1080 camera frame.",
+      "State-space generation: designed the normalized 22-feature state representation and reward ruleset that let a compact MLP (256-256-128) learn navigation without raw pixels or convolutions.",
+      "Double DQN trained over ~4000 episodes with experience replay, a target network, epsilon-greedy exploration, Huber loss, and gradient clipping — decoupling action selection from evaluation to curb Q-value overestimation.",
+      "Sim-to-real transfer: a calibration script aligned simulation linear/angular velocities to the rover's real motion, and temporal heading smoothing plus a 2.5° deadband stabilized closed-loop control on physical hardware (Arduino Uno, L289n driver, HC-05 Bluetooth).",
+    ],
+    caseStudy: {
+      problem:
+        "Autonomous navigation usually leans on expensive per-robot sensor suites, with cost scaling linearly for every robot added. BirdsEye asks whether a single cheap overhead camera and a learned policy can drive a rover to a goal in real time — a proof of concept that scales to settings like warehouses.",
+      approach:
+        "Train a Double Deep Q-Network in a calibrated PyGame simulation, then transfer the policy to a 3D-printed RC rover. Since a real system has no ground-truth state, a computer-vision pipeline reconstructs the same 22-dimensional state vector the agent trained on — isolating the rover with HSV color masks, fitting a rotated bounding box, recovering heading from a tape marker, and locating the target — and feeds it to the model, which issues discrete actions over Bluetooth.",
+      result:
+        "A 100% success rate across 50 real-world episodes (average reward 108.97, ~26.6 steps to target) with smooth, collision-free trajectories — confirming that a structured state representation plus classical vision can bridge the sim-to-real gap on low-cost hardware.",
+    },
+    media: [
+      {
+        type: "image",
+        src: "/images/birdseye.png",
+        alt: "The BirdsEye rover and its green cylindrical target",
+      },
+    ],
+    links: [
+      {
+        label: "View final report",
+        href: "/documents/birdseye-final-report.pdf",
+        kind: "document",
+      },
+      {
+        label: "View presentation",
+        href: "/documents/birdseye-presentation.pptx",
+        kind: "document",
+      },
+    ],
+  },
+  // --------------------------------------------------------------------------
+  {
     slug: "pca-framework",
     title: "PCA Framework",
     subtitle: "Embedded device authentication, from-scratch numerics in C",

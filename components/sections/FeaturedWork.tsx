@@ -15,7 +15,7 @@ export function FeaturedWork() {
           index="01"
           eyebrow="Featured work"
           title="Flagship projects"
-          lede="Three systems I'm proudest of — hardware, numerics, and product, each with a number to show for it."
+          lede="The systems I'm proudest of — hardware, numerics, machine learning, and product, each with a number to show for it."
         />
 
         <div className="grid gap-5 md:grid-cols-2">
