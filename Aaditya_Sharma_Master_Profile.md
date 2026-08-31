@@ -330,6 +330,47 @@ A real-time vitals-monitoring cubicle designed to bring accessible health checku
 
 ---
 
+### 6.7 BirdsEye — Vision-Based Autonomous Rover (Sim-to-Real RL)
+*Role: **Team Lead & Lead Programmer** · Team of 4 · ECE 4524 · Spring 2026*
+
+An autonomous rover that navigates to a goal in real time using only a top-down webcam for perception. A reinforcement-learning policy was trained entirely in simulation, then transferred to a physical rover — a proof-of-concept for inexpensive, camera-only autonomous navigation that scales to settings like warehouses. Integrates computer vision, reinforcement learning, robotics, and real-time processing.
+
+**One-line summary:** Led a 4-person team to build a vision-based autonomous rover that learns a navigation policy in simulation via Double DQN and transfers it to real hardware, achieving a 100% success rate over 50 real-world episodes.
+
+**Machine learning / reinforcement learning**
+- **Double Deep Q-Network (DDQN)** — a fully-connected MLP mapping a 22-dimensional state vector to Q-values over 5 discrete actions (three hidden layers of 256/256/128 with ReLU). Double DQN decouples action selection from evaluation to reduce Q-value overestimation.
+- **Training framework** — experience replay with random minibatch sampling, a separate target network, epsilon-greedy exploration with decay, Huber (SmoothL1) loss with gradient clipping, and Polyak (soft) target updates. Trained across ~4,000 episodes (~80 steps each).
+- **Reward shaping** — dense distance-based shaping (+/− for moving toward/away from the goal) plus terminal rewards for reaching the target (+100) and hitting a boundary (−100).
+- **Deliberate architecture choice** — chose an MLP over a CNN because the input is a structured feature vector, not raw image pixels, avoiding needless computation.
+
+**Computer vision / physical perception**
+- Built an entirely separate real-world perception pipeline (distinct from the simulator's) to reconstruct the 22-D state from raw 1920×1080 frames, down-sampled to a 900×600 logical map.
+- **Rover detection** — dual-range HSV mask (handling hue wrap-around) isolates the red rover body; a min-area rotated rectangle recovers center and corners.
+- **Heading estimation** — a white tape marker on the rover front gives a forward-direction vector; corner labels (FL/FR/BL/BR) are assigned by projection onto forward/right axes.
+- **Target detection** — independent HSV thresholding + connected-component analysis; a min-enclosing circle yields the target position and reach threshold.
+- **Robustness engineering** — temporal smoothing of heading estimates, a 2.5° deadband to suppress jitter, and restricting the marker search to the rover footprint to kill false detections; target radius scaled ×4.25 to stop before physical contact.
+
+**State-space generation**
+- Designed the **22-dimensional normalized state representation** — rover center, four labeled corner coordinates, sin/cos of heading, forward-direction unit vector, target position and radius, distance/delta to target, and distances to all four walls — with a shared normalization scheme so simulation and real-world states are interchangeable.
+
+**Sim-to-real transfer**
+- Wrote a **calibration script** that tunes simulation motion parameters (linear/angular velocity) to match the physical rover's measured motion — "the model should adjust to reality, not the other way around."
+- Real-time closed loop: webcam frame → 22-feature state → DDQN action (0–4) → serialized motor command over PySerial → HC-05 Bluetooth → Arduino Uno → L298N motor driver.
+
+**Hardware**
+- 3D-printed chassis and motor mounts; Arduino Uno + HC-05 Bluetooth + L298N motor driver; overhead webcam on a tripod.
+
+**Results**
+- **100% success rate (50/50 real-world episodes)** — successful sim-to-real policy transfer.
+- Average reward 108.97 (range 103.48–116.20); average episode length 26.6 steps.
+- Reliable convergence with smooth, goal-directed trajectories, consistent wall avoidance (never approached the ~0.10 safety threshold), and stable performance with no policy drift over extended operation.
+
+**Artifacts:** Final report (`public/documents/birdseye-final-report.pdf`) and final presentation (`public/documents/birdseye-presentation.pptx`); cover image at `public/images/birdseye.png`.
+
+**Skills / tags:** Machine Learning, Reinforcement Learning, Computer Vision, Robotics, Sim-to-Real, Real-Time Systems, Team Leadership.
+
+---
+
 ## 7. Research & Publications
 
 ### Peer-reviewed publication (IJISRT)
@@ -554,9 +595,9 @@ Talks:
 
 ### Tailoring guidance by role type
 - **Embedded / firmware:** lead with ECE 4534 pilot cohort, Micron R2R/CPM, WorkCell firmware + sensor/actuator control, the solar fire-detection node (power electronics + closed-loop PI control), PCA Framework C/MCU work, and UTA for embedded systems.
-- **Robotics / autonomy:** lead with President of VT CRO, WorkCell (CV + AprilTags + closed-loop calibration), CRA concentration, Principles of Robotics coursework.
+- **Robotics / autonomy:** lead with President of VT CRO, WorkCell (CV + AprilTags + closed-loop calibration), BirdsEye (vision-based autonomous rover, Double DQN, sim-to-real transfer — Team Lead & Lead Programmer), CRA concentration, Principles of Robotics coursework.
 - **Full-stack / software:** lead with Petal (Next.js/React/TS + Supabase + distributed job system), Applied Software Design, GitHub.
-- **ML / data:** lead with Micron ARIMA modeling, Petal's embedding/LLM pipeline, PCA Framework, Advanced ML (grad-level) + AI coursework.
+- **ML / data:** lead with Micron ARIMA modeling, Petal's embedding/LLM pipeline, BirdsEye (Double DQN reinforcement learning + computer-vision perception + sim-to-real transfer), PCA Framework, Advanced ML (grad-level) + AI coursework.
 
 ---
 
@@ -573,6 +614,7 @@ Talks:
 | Flagship project 1 | WorkCell — autonomous 3D print farm (Gold + Honda award) |
 | Flagship project 2 | Petal — AI notes app (vector + LLM, all-in-Postgres) |
 | Flagship project 3 | PCA Framework — C-native PCA for embedded device auth |
+| Flagship project 4 | BirdsEye — vision-based autonomous rover, sim-to-real RL (Team Lead & Lead Programmer) |
 | Publication | IJISRT, Sept 2024, IJISRT24AUG1182 |
 | Team led | 140+ engineers |
 | Students taught | 350+ |
