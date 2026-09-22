@@ -8,7 +8,7 @@ export function Leadership() {
     <section id="leadership" className="scroll-mt-20 border-t border-line">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <SectionHeading
-          index="06"
+          index="07"
           eyebrow="Leadership"
           title="Initiatives & leadership"
         />

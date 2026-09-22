@@ -1,10 +1,15 @@
 # Aaditya Sharma — Master Profile & Candidate Context
 
-> **Purpose:** A comprehensive, single-source-of-truth reference compiling everything known about Aaditya Sharma — synthesized from four resume variants, a detailed brag sheet, the official (unofficial) VT transcript, the Petal build notes, the PCA Framework research report, the MADS research project, and the IJISRT publication. This is **not** a resume; it is a master context file meant to be (a) fed into a resume-tailoring assistant and reweighted for specific applications, and (b) used as the raw material for a portfolio website. It intentionally includes far more detail than any single resume — including items never placed on a resume — because a tailoring tool can always cut down, but cannot invent context.
+> **Purpose:** A comprehensive, single-source-of-truth reference compiling everything known about Aaditya Sharma — synthesized from four resume variants, a detailed brag sheet, the official (unofficial) VT transcript, the Petal build notes, the PCA Framework research report, the MADS research project, the BirdsEye final report, the reference notes prepared for Dr. Rose Qingyang Hu, and the IJISRT publication. This is **not** a resume; it is a master context file meant to be (a) fed into a resume-tailoring assistant and reweighted for specific applications, and (b) used as the raw material for a portfolio website. It intentionally includes far more detail than any single resume — including items never placed on a resume — because a tailoring tool can always cut down, but cannot invent context.
 >
 > **Audience:** Private — Aaditya and his tooling only.
-> **Last compiled:** July 2026
-> **Conflicts resolved this pass:** VT CRO scale (140+ / 7 teams / 4 divisions); CRO role progression (Member → VP → President); Courses By You title (Founder); GPA (3.70, per transcript). See §18 for remaining open items.
+> **Last compiled:** September 2026
+>
+> **Maintenance rule:** this file is the source of truth and must be updated *whenever* new information arrives — a shipped product, a new role or title, an award, a course, a metric, a publication. Update the relevant section, the §17 fact sheet, and §18 open items in the same pass, and bump "Last compiled" above. The portfolio site (`content/*.ts`) is downstream of this file, not the other way around.
+>
+> **Changed this pass (Sept 2026):** Petal shipped to the Apple App Store as a native SwiftUI iOS client — §6.2 rewritten around the two-client architecture (§6.2); VT CRO expanded to the full four-year progression, growth figures, and department impact from the Dr. Hu reference notes (§4); Lead TA role for ECE 4534 added (§5.1); Swift / iOS added to skills (§9); Fall 2026 coursework confirmed in progress (§2.4); graduate-school plans recorded (§19).
+>
+> **Conflicts resolved in earlier passes:** VT CRO scale (now 140+ engineers / 12 teams — the older "7 teams / 4 divisions" figure is superseded); CRO role progression (now the full five-stage progression, not "Member → VP → President"); Courses By You title (Founder); GPA (3.70, per transcript). See §18 for remaining open items.
 
 ---
 
@@ -15,7 +20,8 @@
 | Full name | Aaditya Sharma |
 | Phone | 540 605 0172 |
 | Email | aaditya07@vt.edu |
-| Portfolio | aadityasharma.lovable.app |
+| Portfolio | Next.js portfolio in `theGeekyBoi/portfolio`, deployed on Vercel *(the older `aadityasharma.lovable.app` link is stale — confirm the live domain, see §18)* |
+| Shipped product | Petal — `petal-notes.com` (web) · `apps.apple.com/app/petal-notes/id6785715493` (iOS) |
 | LinkedIn | linkedin.com/in/aaditya-sharma-0611002b1 |
 | GitHub | github.com/theGeekyBoi |
 | University location | Blacksburg, VA |
@@ -145,25 +151,63 @@ Research internship at an Indian Institute of Technology. *(Which IIT, topic, me
 
 ## 4. Robotics Leadership — Virginia Tech Competitive Robotics Organization (VT CRO)
 
-VT CRO is Virginia Tech's largest robotics organization. Aaditya's involvement is a multi-year leadership progression:
+VT CRO is the **largest active ECE organization at Virginia Tech** and, since the growth described below, the default destination for ECE majors who want to apply coursework to real systems. Aaditya's involvement is a four-year progression from freshman engineer to President.
 
-- **Member** — Sep 2023 – Aug 2025
-- **Vice President of Engineering** — Aug 2025 – Feb 2026
-- **President** — Feb 2026 – Present *(current)*
+### 4.1 Role progression
+
+| Dates | Role | Scope |
+|---|---|---|
+| Sep 2023 – May 2024 | **Engineer** | IEEE SoutheastCon Hardware Competition team |
+| Aug 2024 – 2025 | **Engineer** | WorkCell (autonomous 3D print farm) |
+| 2025 – Feb 2026 | **ECE & Software Lead** | WorkCell |
+| Aug 2025 – Feb 2026 | **Vice President of Engineering** | Organization-wide technical direction |
+| Feb 2026 – Present | **President** *(current)* | Entire organization — 140+ engineers, 12 teams |
 
 > **Resume shorthand:** "President, VT CRO (current)" is sufficient on most resumes; the full progression above is recorded here for completeness and for any application that rewards demonstrated growth.
 
-**Current scope (as President):**
-- Leads **140+ engineers** across **7 technical design teams and 4 operational divisions**.
-- Directs organizational strategy and technical vision for multidisciplinary robotics projects spanning **electrical, mechanical, and software** systems.
-- **ECE Lead** for the WorkCell project.
-- Org website: vtcro.org
+- **Freshman year (SoutheastCon, 2023–24)** — joined as an engineer on the IEEE SoutheastCon hardware team, building the competition robot end to end (electronics, fabrication, debugging). **2nd place, Hardware Design Competition.**
+- **WorkCell engineer (2024–25)** — firmware, sensor/actuator control, and the communication layer tying gantry, printers, and storage together.
+- **WorkCell ECE & Software Lead** — owned the closed-loop computer-vision calibration, the continuous print queue, and the integration of firmware, backend software, and mechanical systems. Gold Award + Honda Innovation Award at the National Robotics Challenge; selected to exhibit at OpenSauce 2026. (See §6.1.)
+- **VP of Engineering → President** — organizational strategy and technical vision across electrical, mechanical, and software systems; two full recruitment and onboarding cycles; multiple leadership transitions including his own handoff out of the VP seat; manages the organization's GitHub repositories and engineering workflow across all 12 teams.
+
+### 4.2 Growth under his leadership
+
+The clearest measure is the organization before he stepped into leadership (Aug 2025) versus today:
+
+| Measure | Aug 2025 | Today |
+|---|---|---|
+| Engineers | ~75 | **140+** |
+| Teams | 5 | **12** (7 design, 5 support) |
+| K-12 students reached / yr | 670 | **1,600+** |
+
+- **Secured $32,500 in funding**, with the support of Department Head Dr. Rose Qingyang Hu, plus the physical space needed to sustain that growth. Both were fights, and both were won in time to matter.
+- **Structure beyond competition** — innovation, catering, startup, and product-based teams now sit alongside the traditional design teams.
+
+### 4.3 What it changed for the Bradley Department
+
+- **Built the curriculum into the organization** — helped launch **EmbArch**, VT CRO's first ECE-only team: an advanced embedded architecture team created in collaboration with **ECE 4534 (Embedded System Design)** and **Dr. Leyla Nazhandali**. It gives students a direct path from a departmental course into a working engineering team, and is a template other courses could follow.
+- **Represented the department externally** — presentations and pitches to distinguished ECE alumni, talks at department events about the robotics community being built at VT, and hosting visitors and alumni in the lab spaces.
+- **Widened the pipeline into ECE** — K-12 outreach grew from 670 students a year to more than 1,600, reaching students well before they choose a major.
+- **Turned funding into capacity** — the $32,500 and the additional space let the organization absorb nearly twice as many engineers without the experience degrading for the students already there.
+
+Org website: vtcro.org
 
 ---
 
 ## 5. Teaching
 
-### Undergraduate Teaching Assistant — Virginia Tech
+### 5.1 Lead Teaching Assistant — ECE 4534 (Embedded System Design), Virginia Tech
+*Blacksburg, VA · Aug 2026 – Present*
+
+ECE 4534 is Virginia Tech's most advanced embedded systems course, and roughly **70% of it is the semester project**. As Lead TA, Aaditya's responsibilities go past a normal TA role:
+
+- **Course development** — contributes to the syllabus and writes/refines assignments alongside the instructor.
+- **Teaching** — helps deliver course material, not only support it.
+- **Owns the project track** — the primary point of contact for every project team in the class: helping students scope and plan their projects, keeping them on track against milestones and deadlines, and debugging hardware and firmware with them throughout the semester.
+
+**How he was selected:** he was chosen for the **ECE 4534 pilot cohort** (Fall 2025), performed excellently in both the embedded systems and advanced embedded systems courses, was an established TA for ECE 2564, and had the hands-on project record from VT CRO — the same kind of open-ended systems work the course's projects demand.
+
+### 5.2 Undergraduate Teaching Assistant — Virginia Tech
 *Blacksburg, VA · Aug 2024 – Present*
 **Courses:** ECE 2564 (Embedded Systems) and ECE 2514 (Computational Engineering)
 *(ECE 2514 Computational Engineering was TA'd in Fall 2024, Aug–Dec 2024, including weekly office hours on foundational C++.)*
@@ -202,55 +246,98 @@ A fully custom, fully autonomous multi-printer 3D manufacturing workcell.
 
 ---
 
-### 6.2 Petal — AI-Powered Notes Application
-*Role: Founder & Full-Stack Developer · Personal project*
+### 6.2 Petal — AI-Powered Notes Application (iOS + Web)
+*Role: Founder & Full-Stack Developer · Personal product · May 2026 – Present*
 
-A full-stack, AI-powered notes application that automatically organizes notes into categories using vector embeddings and semantic search. Substantially more sophisticated than a typical notes app — it demonstrates AI/ML engineering, distributed-systems thinking, and full-stack product delivery.
+> **Status:** shipped. Live on the Apple App Store (September 2026) and on the web at petal-notes.com. Sole developer, start to submission.
 
-**One-line summary:** Built an AI notes app that auto-organizes entries via vector embeddings and a self-improving categorization model, on a Next.js + Supabase + OpenAI stack.
+A private, AI-assisted note-taking product shipping as **two first-class clients on one backend**: a Next.js 16 web app (petal-notes.com) and a native SwiftUI iOS app **live on the App Store** (`https://apps.apple.com/app/petal-notes/id6785715493`), both against the same Supabase Postgres project. ~20,000 lines of TypeScript/React, ~22,000 lines of Swift, 26 SQL migrations, 37 test suites, 149 commits.
 
-**Frontend**
-- **Next.js 16** (App Router) — route groups, dynamic routes, Route Handlers (API), Server Components.
-- **React 19** — hooks, custom hooks, context providers (Auth, Theme).
-- **TypeScript 5** — strict typing across app, libs, and Deno edge functions.
-- **Tailwind CSS 4** — utility-first styling, PostCSS pipeline, LightningCSS, dark-mode theming.
-- **DOMPurify 3** — HTML sanitization / XSS prevention in the rich-text editor.
-- **react-speech-recognition 4** — voice-to-text dictation (Web Speech API).
-- **Custom rich-text editor** — `contentEditable`-based, with toolbar, caret/selection management, and checklists.
+**One-line summary:** Shipped an AI notes app on iOS and the web that files notes by meaning using a hybrid vector pipeline — and gets more accurate every time the user corrects it, while making almost no LLM calls.
 
-**Backend / Database**
-- **Supabase** — Postgres, Auth, Edge Functions, Row-Level Security.
-- **PostgreSQL** — relational schema, `SECURITY DEFINER` functions, triggers, soft deletes.
-- **pgvector** — 1536-dim embeddings, cosine-similarity search (`<=>`), semantic matching.
-- **pgmq** — Postgres-native message queue for background jobs (claim/complete, visibility timeouts).
-- **pg_cron** — scheduled worker invocation every 10 seconds.
-- **pg_net** — async HTTP from Postgres to trigger Edge Functions.
-- **supabase_vault** — encrypted secrets management (worker secrets, project URLs).
-- **Deno** — runtime for Supabase Edge Functions.
-- **Row-Level Security (RLS)** — per-user data isolation enforced at the database layer.
+**The core idea — the dual-editor boundary**
+Most note apps conflate *capturing* a thought with *reviewing* one. Petal splits them into two editors with deliberately different persistence rules:
+- **Home (intake/inbox, `/home`)** — creates uncategorized drafts, recovers interrupted work, categorizes **only on explicit user intent**.
+- **Note (review/edit, `/notes/[id]`)** — autosaves content on the existing row, preserves category, **never** re-runs AI.
 
-**AI / ML**
-- **OpenAI API** — `text-embedding-3-small` embeddings; GPT models for tie-breaking, category naming, and metadata generation.
-- **Vector semantic search** — automatic note categorization by meaning, not keywords.
-- **Hybrid AI pipeline** — vector similarity + LLM tie-breaker with confidence thresholds (high / medium / low); falls back to user prompts or AI-suggested new categories when confidence is low.
-- **Self-improving ML loop** — when a user corrects a note's category, a background worker uses an LLM to extract and reinforce "semantic anchors," continuously refining each category's embedding over time.
+That boundary is the product thesis: typing doesn't repeatedly spend AI tokens or bounce a note between categories, leaving the page doesn't lose a half-written thought, and editing an old note doesn't silently reclassify it.
 
-**Architecture / distributed-systems patterns**
-- **All-in-Postgres asynchronous job-processing system** (pgmq + pg_cron + pg_net) driving Deno Edge Function workers — notably built entirely within Postgres rather than using a separate queue service.
-- **Fault-tolerant background workers** — batch claiming, visibility timeouts, retry logic, idempotency, and **optimistic concurrency control** for safe updates under contention.
-- Database triggers for automatic embedding invalidation; soft deletes; cascading category/note cleanup; versioned migrations and backfill scripts.
+**Web stack**
+- **Next.js 16** (App Router, Turbopack), **React 19**, **TypeScript 5**, **Tailwind CSS 4**.
+- **GSAP + ScrollTrigger + Lenis** for the marketing/landing motion; **DOMPurify** for HTML sanitization.
+- **react-speech-recognition** (Web Speech API) dictation; **pdfjs-dist** for client-side PDF text extraction; **heic-to** for HEIC decoding (both dynamic-import only, so nobody pays the ~1 MB / ~3 MB cost unless they use the feature).
+- Node's built-in test runner + jsdom.
 
-**Product surface / features**
-- Authentication: sign-up, email verification, password reset.
-- Onboarding tour, search, soft-delete/recover, settings, dark mode.
-- Persisted user preferences (theme, text size, date format).
-- Responsive, themeable UI.
+**iOS stack** (native, not a wrapper — chosen over React Native / Capacitor for real dictation and rich text)
+- **SwiftUI** app with **SwiftData** as an offline-first local store, encrypted at rest at the `NSFileProtectionComplete` class.
+- **TextKit + a custom `NSLayoutManager`** for the rich-text editor and list markers.
+- **Speech framework + AVAudioEngine** for dictation; **VisionKit** (`VNDocumentCameraViewController`) for document scanning.
+- **Supabase Swift SDK**; shipped through App Store review.
 
-**Security**
-- Row-Level Security; `SECURITY DEFINER` functions with locked `search_path`; per-user authorization checks; Supabase Vault for secret management; DOMPurify sanitization (XSS prevention).
+**Backend**
+- **Supabase** — Postgres, Auth, Row-Level Security, Realtime, Storage, Edge Functions (Deno).
+- **pgvector** (1536-dim embeddings), **pgmq** (job queues), **pg_cron + pg_net** (scheduling), **supabase_vault** (worker secrets).
+- **OpenAI** — `text-embedding-3-small` for embeddings; `gpt-4o-mini` for tie-breaks, category naming (Responses API) and metadata enrichment (Chat Completions JSON mode).
+
+**Smart Sort — how categorization actually works**
+Not "send the note to an LLM and ask which folder." A hybrid vector pipeline that learns per-user, with LLM calls used only where they are cheap and narrow:
+1. **Categories are vectors, not labels.** Each carries a name, description, and a hidden `semantic_anchors` field (10–15 keywords and real-world examples); a background worker generates anchors with `gpt-4o-mini` in JSON mode when missing, then embeds name + description + anchors.
+2. **On explicit save with "Auto" selected**, the client posts to `POST /api/notes/classify`; the route verifies the bearer token and note ownership, converts sanitized HTML to capped plain text (plus any extracted PDF text, budgeted 2400/1600 chars so a long note can't starve its attachment), and embeds it.
+3. **`match_category`, a Postgres RPC**, does the matching and rejects any call where `auth.uid() ≠ p_user_id`: baseline `1 − cosine_distance` against the user's category vectors, a historical signal from the 5 nearest previously-categorized notes each weighted by `exp(-0.0231 × age_days)` (~30-day half-life), blended as `clamp(0.70 × base + 0.30 × historical, 0, 1)`. The raw vector winner is preserved separately (`initial_ai_category_id`, `initial_ai_confidence`) so learned behavior can later be compared against pure similarity.
+4. **Thresholds decide the UX** (defaults 0.50 / 0.40 / 0.30, env-overridable, validated as `LOW < MEDIUM < HIGH` or everything falls back to defaults): ≥ HIGH auto-assigns with a toast; ≥ MEDIUM auto-assigns with a "Change" action; ≥ LOW prompts between the two candidates; below that, suggests a new category name or manual choice.
+5. **A narrow tie-breaker.** `gpt-4o-mini` is called only when both top candidates clear MEDIUM, have different names, *and* sit within 0.02 of each other — it receives exactly two allowed names and must return one, case-sensitive. Wrong casing, extra text, or an API failure falls back to the vector winner; at *exactly* 0.02 no model call happens.
+6. **It learns from corrections.** Moving a note enqueues a `pgmq` job; a Deno Edge Function worker (`embed-category`, invoked by `pg_cron` every 10s, authenticated with a dedicated Vault secret rather than a JWT) asks for one or two note-grounded anchors, rejects unrelated output, consolidates to at most 15 anchors using compare-and-swap on the previous anchor string, and clears the category embedding so it regenerates.
+
+Net effect: **usually zero model calls per note** after the first embedding, and accuracy that improves the more the user corrects it.
+
+**Durability engineering (capture as a durability problem)**
+- **Client-reserved UUIDs** — `crypto.randomUUID()` runs synchronously before any async work and is written to `localStorage` under `petal_active_home_draft`, so the browser knows which row it intended to write even if the tab is killed mid-request.
+- **Retry-safe upsert** — unconfirmed saves use `upsert(draft, { onConflict: "id" })`, so a committed-but-lost response retries into the same row instead of duplicating.
+- **Serialized save queue** so an older in-flight request can't land after a newer one.
+- **Triggers** — 1000 ms debounce, `visibilitychange`, and unmount cleanup, all reading from refs rather than React state so late saves never write stale text.
+- **Auth-gated one-time hydration** — waits for `authenticated` + session + user + `session.user.id === user.id`, with `hasHydratedRef` preventing a token refresh from restoring old DB content over live typing.
+- **Warm cross-device handoff** — primary path is the exact local bookmark (validated: owned, not deleted, `category_id IS NULL`, non-empty — otherwise cleared, never falling through to an arbitrary draft); fallback is the single most recent uncategorized note, hydrated only if `0 ≤ now − updated_at < 24h`.
+- **Empty drafts are hard-deleted** while established notes go to Recently Deleted (15-day purge on page load).
+
+**Attachments**
+- Images and PDFs live as separate rows keyed by `note_id` plus objects in a private Storage bucket — deliberately *not* embedded in note HTML, because the web's `sanitizeHtml.ts` and iOS's `PetalHTML.swift` are a hand-maintained 1:1 pair and any new tag breaks round-trip parity between clients.
+- **Attachments are immutable** — write-once, no `updated_at`, no merge conflicts, no `sync_status`; the row reaches Postgres only after the bytes land in Storage, so the server can only ever observe "uploaded."
+- **The storage path is the security boundary** — a check constraint pins `storage_path` to `user_id/note_id/attachment_id.ext`, and `storage.objects` RLS policies authorize on the first path segment, making "owns the row" and "owns the object" the same claim by construction.
+- **250 MB per-user quota** enforced by a `BEFORE INSERT` trigger taking a per-user advisory lock (SQLSTATE 53100, translated client-side to readable text); the client-side check is explicitly advisory only.
+- **No OCR anywhere**, deliberately; extracted PDF text is transient — handed to the classifier and discarded, never written to `search_text`.
+- Deletion runs through a `deleted_storage_objects` reaper queue drained by a daily 04:00 UTC purge worker, so soft-deleting a note leaves attachments intact and restore is lossless.
+
+**iOS sync engine (offline-first)**
+- A `SyncEngine` reconciles a single SwiftData main context against Supabase: initial full download → watermark-based incremental pull (`updated_at > watermark`), an outbound `pendingSync` queue using id-based upserts.
+- Conflict policy: **last-write-wins by `updated_at`**, with the equal-timestamp case suppressing the echo of the device's own writes.
+- Realtime channels for notes, categories, and attachments, with reconnect auto-drain; offline Auto-saves defer classification and drain on reconnect *after* the note itself uploads.
+- A deliberate guard: if the initial sync returns **zero** categories it throws instead of setting the watermark — a real account always has seeded defaults, so zero means RLS silently returned nothing behind an unrefreshed token, which would otherwise leave the app permanently stuck showing 0 notes.
+
+**Cross-platform rigor**
+Everything shared between platforms was ported as **pure, separately-tested logic** — `CategorizationDecision`, `FuzzySearch` (Damerau–Levenshtein), `HomeDraftSave`, `ExistingNoteSave`, `SearchHaystack`, `CategoryName`, `SpokenPunctuation` — so web and iOS run the same rules, verified by parallel test suites on both sides.
+
+**Other product surface**
+- **Search** takes two paths by corpus size: below a threshold it pulls every note's searchable text and matches in-browser (typo-tolerant, identical to iOS); above it, a `search_notes` Postgres RPC with trigram indexes (exact substring, bounded payload). Matches note titles, bodies, and attachment filenames.
+- **Rich text** on `contenteditable` with a hand-written sanitizer: paste strips fonts, colors, headings, and margins while preserving paragraphs, lists, and safe links, and linkifies bare URLs into `noopener,noreferrer` targets.
+- **Dictation** inserts at the saved caret, replaces selections, and updates a *single* temporary text node as the interim transcript changes — which is what avoids the duplicated-words bug most naive implementations have.
+- **A three-phase loading transition** (`loading → exiting → complete`) using one persistent overlay portaled into `<body>`, 420 ms cubic-bezier, `animationend`-driven unmount with a timeout fallback, and a 140 ms no-rotation fade for reduced-motion users.
+- **Landing page** with GSAP ScrollTrigger + Lenis inertia scroll animating a "clutter → clarity" sequence, every layer of motion on a separate nested element so nothing fights over `transform`, all gated behind `prefers-reduced-motion`.
+- **Onboarding tour** ported 1:1 across both clients (dimmed scrim + spotlight, persisted in `profiles.has_completed_tour`), plus a versioned privacy-consent gate.
+- Auth (sign-up, email verification, password reset), settings, persisted preferences (theme, text size, date format), soft delete/recover, dark mode, responsive UI.
+
+**Security model**
+- Browsers use the publishable key + RLS only; service-role and OpenAI keys never leave the server.
+- Every RPC re-verifies ownership rather than trusting the caller; `SECURITY DEFINER` functions run with a locked `search_path`.
+- All note/category text is treated as untrusted input when it reaches a model prompt; DOMPurify + the hand-written sanitizer handle XSS.
+- Supabase Vault for worker secrets; per-user RLS isolation throughout; SwiftData store encrypted at rest on iOS.
 
 **Tooling / DevOps**
-- ESLint 9, Node.js native test runner (`node --test`), Supabase migrations (versioned SQL), backfill scripts, Git.
+- ESLint 9, Node.js native test runner (`node --test`) + jsdom, Swift test suites, Supabase versioned migrations and backfill scripts, Xcode, Git.
+
+**Portfolio framing angles**
+- *Systems thinking* — the dual-editor boundary plus the durability layers (UUID reservation, retry-safe upsert, warm handoff): designing for failure rather than the happy path.
+- *AI done economically* — Smart Sort: vectors do the work, the LLM is a 0.02-margin tie-breaker, and the system learns from corrections instead of re-prompting.
+- *Cross-platform rigor* — shared pure-logic ports and the sanitizer parity pair; two clients, one behavior, enforced by tests on both sides.
 
 ---
 
@@ -399,17 +486,19 @@ An autonomous rover that navigates to a goal in real time using only a top-down 
 
 ## 9. Technical Skills (full superset across all sources)
 
-**Programming languages:** C, C++, Python, Java, JavaScript, TypeScript, SQL (PostgreSQL / PL-pgSQL), HTML, CSS
+**Programming languages:** C, C++, Python, Swift, Java, JavaScript, TypeScript, SQL (PostgreSQL / PL-pgSQL), HTML, CSS
 
 **Embedded & hardware:** Firmware development, real-time systems, control architectures, microcontrollers, sensor/actuator control, communication protocols; power electronics (DC/DC boost converters, PI control), Bluetooth; Arduino, Arduino Q, Raspberry Pi, Jetson Nano, ESP32, MSP432
 
 **Robotics & AI/ML:** ROS, computer vision, AprilTags, PyTorch, Pandas, ARIMA / time-series modeling, machine learning; principal component analysis (custom C implementation, cyclic Jacobi eigensolver, dual-covariance formulation); OpenAI API, vector embeddings, semantic search, pgvector, LLM integration, RAG-style retrieval
 
-**Web & data:** Next.js, React, TypeScript, Tailwind CSS, Deno, Supabase, PostgreSQL, Row-Level Security, message queues (pgmq), cron scheduling (pg_cron), async HTTP from Postgres (pg_net), database triggers, Edge/serverless functions, Tableau API, REST, DOMPurify
+**Web & data:** Next.js (App Router, Turbopack), React, TypeScript, Tailwind CSS, GSAP / ScrollTrigger / Lenis, Deno, Supabase (Postgres, Auth, Realtime, Storage, Edge Functions), PostgreSQL, Row-Level Security, message queues (pgmq), cron scheduling (pg_cron), async HTTP from Postgres (pg_net), database triggers, Edge/serverless functions, trigram search indexes, Tableau API, REST, DOMPurify
 
-**Tools & platforms:** Git / GitHub, VS Code, Fusion 360, OnShape, KiCAD, CMake, ESLint, Node.js test runner, Supabase migrations, Microsoft Office, Google Workspace
+**iOS / native:** Swift, SwiftUI, SwiftData (offline-first local store, `NSFileProtectionComplete` encryption at rest), TextKit and custom `NSLayoutManager` rich-text editing, Speech framework + AVAudioEngine dictation, VisionKit document scanning, Supabase Swift SDK, offline-first sync engines (watermark pulls, outbound queues, last-write-wins conflict resolution), Xcode, App Store submission and release
 
-**Engineering concepts:** Full-stack development, async/background job processing, distributed systems, optimistic concurrency, REST API design, authentication & authorization, web security (XSS prevention, sanitization), responsive design, hardware/software integration, autonomous robotics, statistical process control, predictive/anomaly detection, numerical methods & linear algebra (eigendecomposition)
+**Tools & platforms:** Git / GitHub, VS Code, Xcode, Fusion 360, OnShape, KiCAD, CMake, ESLint, Node.js test runner, jsdom, Swift test suites, Supabase migrations, Vercel, Microsoft Office, Google Workspace
+
+**Engineering concepts:** Full-stack development, async/background job processing, distributed systems, optimistic concurrency and compare-and-swap, idempotent retry design, offline-first and cross-device sync, cross-platform behavioral parity enforced by parallel test suites, REST API design, authentication & authorization, web security (XSS prevention, sanitization, path-derived authorization), responsive design, hardware/software integration, autonomous robotics, reinforcement learning and sim-to-real transfer, statistical process control, predictive/anomaly detection, numerical methods & linear algebra (eigendecomposition)
 
 > **Note on an early self-rating (2020–22 brag sheet):** Java — Intermediate; Python — Advanced; C++ — Intermediate; JavaScript / HTML / CSS — Beginner. These are dated self-assessments from before university and have since advanced substantially (e.g., C/C++ now used in coursework, teaching, and the PCA Framework; TypeScript/JS used heavily in Petal).
 
@@ -417,12 +506,16 @@ An autonomous rover that navigates to a goal in real time using only a top-down 
 
 ## 10. Honors & Awards (consolidated)
 
+**Shipped products**
+- **Petal — live on the Apple App Store** (`id6785715493`), September 2026: a native SwiftUI iOS client and a Next.js web app on one Supabase backend, ~42k lines across the two, passed App Store review. Sole developer.
+
 **University & engineering**
 - **Gold Award**, National Robotics Challenge 2025 (Workcell category) — WorkCell.
 - **Honda Innovation Award in Manufacturing**, National Robotics Challenge 2025 — WorkCell.
 - **Selected to exhibit at OpenSauce 2026** — WorkCell.
+- **2nd place**, IEEE SoutheastCon Hardware Design Competition (2024) — VT CRO SoutheastCon team.
 - **Best in Course** — Integrated Design Project (Spring 2025), Virginia Tech.
-- **Advanced Embedded Systems pilot cohort** selection, Virginia Tech.
+- **Advanced Embedded Systems pilot cohort** selection, Virginia Tech — subsequently selected as **Lead TA** for the same course (ECE 4534).
 - **Dean's List** — '23, '24, and '25.
 - **Honors College** member.
 
@@ -586,8 +679,10 @@ Talks:
 
 ## 16. Positioning Notes (for tailoring applications)
 
-- **Strongest differentiators:** the WorkCell autonomous print farm (award-winning, real hardware + software + computer-vision systems integration); Petal's AI categorization + self-improving learning loop and all-in-Postgres job queue (rare, systems-level talking points); and the PCA Framework (from-scratch numerical methods in C + embedded deployment + measurable 4–5× speedup).
-- **Profile breadth:** spans embedded/firmware, robotics/autonomy, data/ML (Micron + ARIMA + PCA), full-stack web + applied AI (Petal), plus teaching and large-scale technical leadership (140+ engineers).
+- **Strongest differentiators:** the WorkCell autonomous print farm (award-winning, real hardware + software + computer-vision systems integration); Petal, an AI notes product shipped on the App Store and the web from one backend, with a hybrid vector categorizer that learns from corrections and an all-in-Postgres job queue (rare, systems-level talking points); and the PCA Framework (from-scratch numerical methods in C + embedded deployment + measurable 4–5× speedup).
+- **Profile breadth:** spans embedded/firmware, robotics/autonomy, data/ML (Micron + ARIMA + PCA), full-stack web + native iOS + applied AI (Petal), plus teaching and large-scale technical leadership (140+ engineers).
+- **Leadership arc worth telling in full:** four years at VT CRO from freshman SoutheastCon engineer → WorkCell engineer → WorkCell ECE & Software Lead → VP of Engineering → President, with the organization roughly doubling (75 → 140+ engineers, 5 → 12 teams) and $32,500 secured under his leadership. Few undergraduate applicants can show both the technical depth and the institutional growth in one story.
+- **Teaching depth:** Lead TA for ECE 4534, the department's most advanced embedded course — writes assignments, helps teach, and owns the project track that is ~70% of the grade.
 - **Versatile target roles:** embedded/firmware engineering, robotics/autonomy, software engineering (full-stack), and ML/data — the material can be reweighted toward any of these.
 - **Research credibility:** a peer-reviewed publication, a funded innovation award, and a Nestlé industry collaboration (MADS) are unusual for an undergraduate and signal independent research ability.
 - **Leadership + communication:** debate (World Scholar's Cup), Model UN presidency, and founding/teaching ventures (350+ students taught) show communication and people-leadership alongside technical depth.
@@ -596,7 +691,7 @@ Talks:
 ### Tailoring guidance by role type
 - **Embedded / firmware:** lead with ECE 4534 pilot cohort, Micron R2R/CPM, WorkCell firmware + sensor/actuator control, the solar fire-detection node (power electronics + closed-loop PI control), PCA Framework C/MCU work, and UTA for embedded systems.
 - **Robotics / autonomy:** lead with President of VT CRO, WorkCell (CV + AprilTags + closed-loop calibration), BirdsEye (vision-based autonomous rover, Double DQN, sim-to-real transfer — Team Lead & Lead Programmer), CRA concentration, Principles of Robotics coursework.
-- **Full-stack / software:** lead with Petal (Next.js/React/TS + Supabase + distributed job system), Applied Software Design, GitHub.
+- **Full-stack / software:** lead with Petal (Next.js/React/TS + native SwiftUI iOS + Supabase + distributed job system; shipped to the App Store), Applied Software Design, GitHub.
 - **ML / data:** lead with Micron ARIMA modeling, Petal's embedding/LLM pipeline, BirdsEye (Double DQN reinforcement learning + computer-vision perception + sim-to-real transfer), PCA Framework, Advanced ML (grad-level) + AI coursework.
 
 ---
@@ -612,7 +707,10 @@ Talks:
 | Grad date | May 2027 |
 | GPA | 3.70 |
 | Flagship project 1 | WorkCell — autonomous 3D print farm (Gold + Honda award) |
-| Flagship project 2 | Petal — AI notes app (vector + LLM, all-in-Postgres) |
+| Flagship project 2 | Petal — AI notes app **shipped on the App Store** + web (vector + LLM, all-in-Postgres) |
+| Shipped to users | Petal iOS — apps.apple.com/app/petal-notes/id6785715493 · petal-notes.com |
+| Leadership headline | President, VT CRO — 140+ engineers, 12 teams, $32,500 secured; four-year progression from freshman engineer |
+| Teaching headline | Lead TA, ECE 4534 (Embedded System Design) — syllabus, assignments, and the project track |
 | Flagship project 3 | PCA Framework — C-native PCA for embedded device auth |
 | Flagship project 4 | BirdsEye — vision-based autonomous rover, sim-to-real RL (Team Lead & Lead Programmer) |
 | Publication | IJISRT, Sept 2024, IJISRT24AUG1182 |
@@ -623,6 +721,11 @@ Talks:
 
 ## 18. Open items / to confirm
 
+- **Live portfolio domain** — §1 previously listed `aadityasharma.lovable.app`, which predates the current Next.js site (`theGeekyBoi/portfolio`, Vercel). Confirm and record the production domain.
+- **WorkCell ECE & Software Lead start date** — the portfolio project page says Aug 2024 – Present, while the role progression is written as Engineer (Aug 2024 – 2025) → ECE & Software Lead (2025 – Feb 2026). Confirm when the lead role actually began and align §4.1 with `content/vtcro.ts` and `content/experience.ts`.
+- **Petal metrics worth tracking now that it's shipped** — downloads, retention, crash-free rate, App Store rating, and any user feedback themes. None of these exist in this file yet and they are the numbers that make a shipped product persuasive.
+- **Petal repository** — the portfolio currently links the GitHub profile rather than a dedicated Petal repo; add the repo URL if/when it goes public.
+- **EmbArch outcomes** — the first ECE-only VT CRO team, launched with ECE 4534 and Dr. Nazhandali. Record its size, first-semester deliverable, and whether other courses have followed the template.
 - **PCA Framework context** — confirm the official project name, dates, and whether it was independent research, a course/lab project, or tied to Micron/VT CRO; note any collaborators or advising professor, and the GitHub repo URL.
 - **Cueblocks internship (2021)** — confirm role title, responsibilities, dates, and any shippable outcomes.
 - **IIT research internship** — confirm which IIT, the research topic, mentor, and dates.
@@ -631,4 +734,24 @@ Talks:
 - **Medicle** — confirm which CodeHack year it won, team vs. solo, and add a demo/repo link.
 - **Micron quantified metrics** — if available, add: number of tools/processes the CPM system monitored, hours/week saved by the Tableau reporting automation, and how much earlier the ARIMA model flagged issues.
 - **WorkCell / VT News article URL** — add the direct link for the portfolio.
-- **Portfolio assets** — collect image/video/demo links for WorkCell, Petal, PCA Framework, MADS, the fire-detection node, and Medicle for the website build.
+- **Portfolio assets** — WorkCell, Petal, MADS, BirdsEye, Medicle, and the fire-detection node have images on the site; still missing demo/video links for Petal, PCA Framework, and Medicle.
+
+---
+
+## 19. Graduate school plans (Fall 2027 entry)
+
+Applying in the Dec 2026 – Jan 2027 cycle for Fall 2027 entry, while finishing the B.S. in May 2027.
+
+| Deadline | Program |
+|---|---|
+| Dec 1, 2026 | **MIT** — S.M. in Mechanical Engineering (Controls, Instrumentation & Robotics) |
+| Dec 8, 2026 | **Stanford** — M.S. in Computer Science |
+| Dec 9, 2026 | **Carnegie Mellon** — M.S. in Robotics (MSR) *(hard 3:00 p.m. EST cutoff; no materials accepted after)* |
+| Mid-Jan 2027 | **UC Berkeley** — M.Eng. in EECS *(exact date not yet posted; last cycle closed Jan 14)* |
+| Jan 15, 2027 | **University of Michigan** — M.S. in Robotics |
+
+**Recommenders:** Dr. Rose Qingyang Hu (Department Head, Bradley Department of ECE) speaks to the VT CRO leadership arc — she has known Aaditya since becoming Department Head in January 2025, through lab and workspace tours, CRO events she attended and advised on, funding and space conversations, and occasions where he represented the department to visitors and alumni. Two further recommenders cover the technical and research side directly.
+
+**Logistics:** each school emails its own upload link once the application is submitted; FERPA right to view the letters has been waived, so they remain confidential. A single letter uploaded to all five works everywhere.
+
+**Positioning for these applications:** lead with the robotics and systems record (WorkCell, BirdsEye, the PCA Framework) for MIT / CMU / Michigan, and with Petal plus the software coursework (ECE 3574, CS 3114, ECE 4524, ECE 5424) for Stanford CS and Berkeley M.Eng. The VT CRO leadership arc and the ECE 4534 lead TA role are the differentiators in every version.

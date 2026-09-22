@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ExternalLink, FileText, Github } from "lucide-react";
-import { projects } from "@/content/projects";
+import { projects, type ProjectLink } from "@/content/projects";
 import { YouTubeFacade } from "@/components/ui/YouTubeFacade";
 import { Reveal } from "@/components/ui/Reveal";
+import { AppleIcon } from "@/components/ui/AppleIcon";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -26,6 +27,7 @@ export default async function ProjectPage({ params }: Props) {
 
   const images = project.media?.filter((m) => m.type === "image") ?? [];
   const videos = project.media?.filter((m) => m.type === "youtube") ?? [];
+  const appStore = project.links?.find((l) => l.kind === "appstore");
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
@@ -63,6 +65,25 @@ export default async function ProjectPage({ params }: Props) {
               <dd className="mt-0.5">{project.tags.join(" · ")}</dd>
             </div>
           </dl>
+
+          {appStore && (
+            <a
+              href={appStore.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex min-h-11 items-center gap-3 rounded-sm bg-foreground px-5 py-3 text-background transition-opacity hover:opacity-90"
+            >
+              <AppleIcon className="h-6 w-6" />
+              <span className="text-left leading-tight">
+                <span className="block text-[10px] uppercase tracking-[0.14em] opacity-70">
+                  Download on the
+                </span>
+                <span className="block text-base font-semibold tracking-tight">
+                  App Store
+                </span>
+              </span>
+            </a>
+          )}
         </header>
       </Reveal>
 
@@ -197,9 +218,10 @@ function CaseSection({ title, body }: { title: string; body: string }) {
   );
 }
 
-function LinkIcon({ kind }: { kind?: "external" | "document" | "repo" | "paper" }) {
+function LinkIcon({ kind }: { kind?: ProjectLink["kind"] }) {
   const className = "h-4 w-4";
   if (kind === "document") return <FileText className={className} aria-hidden="true" />;
   if (kind === "repo") return <Github className={className} aria-hidden="true" />;
+  if (kind === "appstore") return <AppleIcon className={className} />;
   return <ExternalLink className={className} aria-hidden="true" />;
 }

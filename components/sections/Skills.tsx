@@ -7,7 +7,7 @@ export function Skills() {
   return (
     <section id="skills" className="scroll-mt-20 border-t border-line">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
-        <SectionHeading index="08" eyebrow="Skills" title="Tools of the trade" />
+        <SectionHeading index="09" eyebrow="Skills" title="Tools of the trade" />
 
         <Reveal>
           <Marquee items={skillMarquee} className="mb-12" />

@@ -12,7 +12,8 @@ export const site = {
   // One-line value proposition under the name in the hero.
   blurb: "Building systems where hardware, software, and intelligence meet.",
   // A quiet status line shown in the About section.
-  currently: "Currently: President of VT CRO · senior year · having fun",
+  currently:
+    "Currently: President of VT CRO · lead TA for ECE 4534 · senior year · having fun",
 
   email: "aaditya07@vt.edu",
 
@@ -35,6 +36,7 @@ export const site = {
     { id: "work", label: "Work" },
     { id: "about", label: "About" },
     { id: "experience", label: "Experience" },
+    { id: "vtcro", label: "VT CRO" },
     { id: "projects", label: "Projects" },
     { id: "research", label: "Research" },
     { id: "contact", label: "Contact" },
@@ -45,6 +47,7 @@ export const site = {
     about: true,
     work: true,
     experience: true,
+    vtcro: true,
     projects: true,
     research: true,
     leadership: true,

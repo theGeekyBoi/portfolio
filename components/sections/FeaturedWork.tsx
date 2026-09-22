@@ -5,6 +5,7 @@ import { featuredProjects } from "@/content/projects";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { Reveal } from "@/components/ui/Reveal";
+import { AppleIcon } from "@/components/ui/AppleIcon";
 import { cn } from "@/lib/utils";
 
 export function FeaturedWork() {
@@ -21,6 +22,7 @@ export function FeaturedWork() {
         <div className="grid gap-5 md:grid-cols-2">
           {featuredProjects.map((project, i) => {
             const image = project.media?.find((m) => m.type === "image");
+            const onAppStore = project.links?.some((l) => l.kind === "appstore");
             return (
               <Reveal
                 key={project.slug}
@@ -66,6 +68,12 @@ export function FeaturedWork() {
                             <p className="mt-1 text-sm text-muted">
                               {project.subtitle}
                             </p>
+                            {onAppStore && (
+                              <p className="mt-3 inline-flex items-center gap-1.5 rounded-sm border border-accent/40 bg-accent-faint px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-accent">
+                                <AppleIcon className="h-3 w-3" />
+                                On the App Store
+                              </p>
+                            )}
                           </div>
                           <ArrowUpRight
                             className="mt-1 h-5 w-5 shrink-0 text-faint transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
@@ -92,7 +100,10 @@ export function FeaturedWork() {
                           {project.tags.map((tag) => (
                             <li
                               key={tag}
-                              className="rounded-sm border border-line px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-faint"
+                              className={cn(
+                                "rounded-sm border border-line px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-faint",
+                                tag === "iOS" && "normal-case"
+                              )}
                             >
                               {tag}
                             </li>

@@ -36,6 +36,10 @@ export const awards: Award[] = [
     detail: "WorkCell",
   },
   {
+    title: "2nd Place — IEEE SoutheastCon Hardware Design Competition",
+    detail: "2024 · VT CRO SoutheastCon team",
+  },
+  {
     title: "Winner ($1,500) — NFTE World Series of Innovation",
     detail: "1st place, MetLife Foundation Good Health & Wellbeing Challenge, 2022–23 · MADS",
   },
@@ -49,7 +53,8 @@ export const awards: Award[] = [
   },
   {
     title: "Advanced Embedded Systems pilot cohort",
-    detail: "Selected for the pilot offering of ECE 4534, Virginia Tech",
+    detail:
+      "Selected for the pilot offering of ECE 4534, Virginia Tech — now lead TA for the course",
   },
   {
     title: "Speaker — NFTE UN Global Goals Conversation 2023",

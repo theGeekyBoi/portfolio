@@ -10,7 +10,7 @@ export function Contact() {
     <section id="contact" className="scroll-mt-20 border-t border-line">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <SectionHeading
-          index="09"
+          index="10"
           eyebrow="Contact"
           title="Let's build something"
           lede="Open to conversations about robotics, embedded systems, ML, and interesting problems in general."

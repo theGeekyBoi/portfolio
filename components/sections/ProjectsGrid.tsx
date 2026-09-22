@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ExternalLink, FileText } from "lucide-react";
 import { projects, projectTags, type ProjectTag } from "@/content/projects";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { AppleIcon } from "@/components/ui/AppleIcon";
 import { cn } from "@/lib/utils";
 
 type Filter = "All" | ProjectTag;
@@ -21,7 +22,7 @@ export function ProjectsGrid() {
     <section id="projects" className="scroll-mt-20 border-t border-line">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <SectionHeading
-          index="04"
+          index="05"
           eyebrow="All projects"
           title="Everything I've built"
         />
@@ -40,6 +41,7 @@ export function ProjectsGrid() {
               aria-pressed={filter === tag}
               className={cn(
                 "min-h-11 rounded-sm border px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors",
+                tag === "iOS" && "normal-case",
                 filter === tag
                   ? "border-accent bg-accent-faint text-accent"
                   : "border-line text-muted hover:border-line-strong hover:text-foreground"
@@ -81,7 +83,10 @@ export function ProjectsGrid() {
                   {project.tags.map((tag) => (
                     <li
                       key={tag}
-                      className="rounded-sm border border-line px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-faint"
+                      className={cn(
+                        "rounded-sm border border-line px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-faint",
+                        tag === "iOS" && "normal-case"
+                      )}
                     >
                       {tag}
                     </li>
@@ -107,6 +112,8 @@ export function ProjectsGrid() {
                     >
                       {link.kind === "document" ? (
                         <FileText className="h-3.5 w-3.5" aria-hidden="true" />
+                      ) : link.kind === "appstore" ? (
+                        <AppleIcon className="h-3.5 w-3.5" />
                       ) : (
                         <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                       )}

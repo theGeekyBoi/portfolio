@@ -1,5 +1,7 @@
 // ============================================================================
 // LEADERSHIP & INITIATIVES — the cards in the Leadership section.
+// VT CRO deliberately lives in its own section (content/vtcro.ts) rather
+// than as a card here, so it isn't reduced to one tile among five.
 // To add one: copy an object, change the values. Order = display order.
 // `stat` is the big number shown on the card (optional).
 // ============================================================================
@@ -14,15 +16,6 @@ export type LeadershipItem = {
 };
 
 export const leadership: LeadershipItem[] = [
-  {
-    title: "Virginia Tech Competitive Robotics Organization",
-    role: "President",
-    dates: "Feb 2026 – Present",
-    description:
-      "Leads Virginia Tech's largest robotics organization — directing strategy and technical vision across electrical, mechanical, and software systems, after progressing from Member to VP of Engineering to President.",
-    stat: { value: "140+", label: "engineers · 7 teams · 4 divisions" },
-    link: { label: "Visit VT CRO", href: "https://vtcro.org" },
-  },
   {
     title: "Courses By You",
     role: "Founder & Teacher",

@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { FeaturedWork } from "@/components/sections/FeaturedWork";
 import { About } from "@/components/sections/About";
 import { Experience } from "@/components/sections/Experience";
+import { VTCRO } from "@/components/sections/VTCRO";
 import { ProjectsGrid } from "@/components/sections/ProjectsGrid";
 import { Research } from "@/components/sections/Research";
 import { Leadership } from "@/components/sections/Leadership";
@@ -20,6 +21,7 @@ export default function HomePage() {
       {s.work && <FeaturedWork />}
       {s.about && <About />}
       {s.experience && <Experience />}
+      {s.vtcro && <VTCRO />}
       {s.projects && <ProjectsGrid />}
       {s.research && <Research />}
       {s.leadership && <Leadership />}

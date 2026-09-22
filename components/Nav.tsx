@@ -72,7 +72,7 @@ export function Nav() {
               <a
                 href={linkHref(item.id)}
                 className={cn(
-                  "relative rounded-sm px-3 py-2 font-mono text-xs uppercase tracking-[0.14em] transition-colors",
+                  "relative whitespace-nowrap rounded-sm px-2 py-2 font-mono text-xs uppercase tracking-[0.14em] transition-colors lg:px-3",
                   active === item.id
                     ? "text-foreground"
                     : "text-muted hover:text-foreground"
@@ -98,7 +98,8 @@ export function Nav() {
 
         {/* Persistent actions (icon links appear once there's room at lg) */}
         <div className="hidden items-center gap-2 md:flex">
-          <span className="hidden items-center gap-2 lg:flex">
+          {/* Social icons need the extra room the 7-item nav takes at lg. */}
+          <span className="hidden items-center gap-2 xl:flex">
             <a
               href={site.socials.github}
               target="_blank"

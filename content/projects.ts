@@ -10,7 +10,9 @@
 //   - `metrics[0]` is the hard number shown on the project card.
 //   - `media` accepts images (put files in public/images/) and YouTube videos.
 //   - `links` become buttons: kind "document" opens a PDF from
-//     public/documents/, "external"/"repo"/"paper" open a URL in a new tab.
+//     public/documents/, "external"/"repo"/"paper" open a URL in a new tab,
+//     and "appstore" additionally renders the big download button at the top
+//     of the case-study page and an "On the App Store" badge on the cards.
 // ============================================================================
 
 export type ProjectTag =
@@ -18,13 +20,14 @@ export type ProjectTag =
   | "Embedded"
   | "ML"
   | "Web"
+  | "iOS"
   | "Impact"
   | "Research";
 
 export type ProjectLink = {
   label: string;
   href: string; // external URL, or a /documents/... path for PDFs
-  kind?: "external" | "document" | "repo" | "paper";
+  kind?: "external" | "document" | "repo" | "paper" | "appstore";
 };
 
 export type ProjectMedia = {
@@ -111,30 +114,38 @@ export const projects: Project[] = [
   {
     slug: "petal",
     title: "Petal",
-    subtitle: "AI-powered notes that organize themselves",
+    subtitle: "Plant your thoughts — AI notes on iOS and the web",
     featured: true,
-    tags: ["ML", "Web"],
+    tags: ["ML", "Web", "iOS"],
     role: "Founder & Full-Stack Developer",
+    dates: "May 2026 – Present",
     summary:
-      "A full-stack AI notes app that auto-categorizes entries by meaning using vector embeddings, an LLM tie-breaker, and a self-improving learning loop.",
+      "A private, AI-assisted notes app shipping as two first-class clients — a native SwiftUI iOS app on the App Store and a Next.js web app — on one Supabase backend. Notes sort themselves by meaning, and the system gets more accurate every time you correct it.",
     metrics: [
-      { value: "1536-dim", label: "embeddings, semantic categorization" },
-      { value: "100%", label: "of the job queue lives in Postgres" },
+      { value: "iOS + Web", label: "two native clients, one Postgres backend" },
+      { value: "1536-dim", label: "pgvector embeddings behind Smart Sort" },
+      { value: "~42k", label: "lines of TypeScript and Swift" },
+      { value: "37", label: "test suites, run in parallel on both clients" },
     ],
     highlights: [
-      "Hybrid AI pipeline — vector similarity (pgvector, cosine search) plus an LLM tie-breaker with confidence thresholds; falls back to user prompts or AI-suggested new categories when confidence is low.",
-      "Self-improving ML loop — user corrections trigger a background worker that extracts and reinforces semantic anchors, continuously refining each category's embedding.",
-      "All-in-Postgres asynchronous job system — pgmq + pg_cron + pg_net drive Deno Edge Function workers with batch claiming, visibility timeouts, retries, idempotency, and optimistic concurrency. No separate queue service.",
-      "Next.js 16 + React 19 + TypeScript 5 frontend with a custom contentEditable rich-text editor, voice dictation, and dark mode.",
-      "Security throughout — Row-Level Security, SECURITY DEFINER functions with locked search_path, Supabase Vault secrets, DOMPurify sanitization.",
+      "Shipped on the App Store — a native SwiftUI app (~22k lines of Swift) chosen over React Native so dictation and rich text are the real system frameworks: TextKit with a custom NSLayoutManager for the editor, Speech + AVAudioEngine for dictation, VisionKit for document scanning.",
+      "A dual-editor product thesis — the Home inbox creates uncategorized drafts and categorizes only on explicit intent, while the Note editor autosaves onto the existing row and never re-runs AI. Typing never spends tokens, leaving never loses a thought, and editing an old note never silently reclassifies it.",
+      "Smart Sort is a hybrid vector pipeline, not a prompt — categories are embedded as name + description + hidden semantic anchors, and a Postgres RPC blends baseline cosine similarity (70%) with the 5 nearest prior notes decayed on a ~30-day half-life (30%). Confidence thresholds then decide whether to auto-assign, offer a choice, or suggest a new category.",
+      "The LLM is a narrow tie-breaker — gpt-4o-mini is called only when the top two candidates both clear the medium threshold and sit within 0.02 of each other, receives exactly two allowed names, and any deviation falls back to the vector winner. Per-note model calls are usually zero after the first embedding.",
+      "A self-improving loop — correcting a category enqueues a pgmq job drained by a Deno Edge Function worker (pg_cron every 10s, authenticated by a Vault secret) that extracts note-grounded anchors, consolidates to at most 15 via compare-and-swap, and clears the embedding so it regenerates.",
+      "Capture treated as a durability problem — client-reserved UUIDs written to localStorage before any async work, retry-safe upserts on conflict, a serialized save queue, ref-based debounce / visibilitychange / unmount triggers, auth-gated one-time hydration, and a validated warm handoff that continues a phone draft on a laptop without resurrecting stale ones.",
+      "Offline-first iOS sync — a SyncEngine reconciles SwiftData against Supabase with watermark-based incremental pulls, an outbound pending queue, last-write-wins conflict resolution with self-echo suppression, Realtime channels with reconnect auto-drain, and a guard that refuses to advance the watermark on a suspicious zero-category sync.",
+      "Cross-platform rigor — categorization decisions, fuzzy search (Damerau–Levenshtein), save semantics, and the HTML sanitizer pair were ported as pure, separately-tested logic so web and iOS run the same rules, verified by parallel test suites on both sides.",
+      "Attachments as a security boundary — images and PDFs are immutable, write-once rows whose storage path is pinned by a check constraint to user_id/note_id/attachment_id.ext, so RLS on the first path segment makes owning the row and owning the object the same claim by construction. A 250 MB quota is enforced by a trigger under a per-user advisory lock.",
+      "Deliberate restraint on privacy — PDF text is extracted client-side, handed to the classifier, and discarded rather than indexed; there is no OCR anywhere; browsers hold only the publishable key behind RLS, and service-role and OpenAI keys never leave the server.",
     ],
     caseStudy: {
       problem:
-        "Notes apps make you do the filing. Folders and tags rot because organizing by hand is exactly the chore people skip — notes should land in the right place by meaning, automatically.",
+        "Notes apps make you do the filing, and folders rot because organizing by hand is exactly the chore people skip. They also conflate two different activities — capturing a thought and reviewing one — so the same editor that should quietly hold a half-written idea is the one re-classifying and re-saving it while you type.",
       approach:
-        "Embed every note (OpenAI text-embedding-3-small, 1536 dimensions) and match it to categories by cosine similarity in pgvector. When similarity alone can't decide, an LLM tie-breaker with confidence thresholds settles it — and when the user corrects a category, a background worker reinforces that category's semantic anchors so the system gets better with use.",
+        "Split capture from review into two editors with deliberately different persistence rules, then make categorization a vector problem rather than a prompt. Every note and category is embedded (OpenAI text-embedding-3-small); a Postgres RPC blends category similarity with a time-decayed vote from the user's own recent notes; confidence thresholds pick the interaction; and an LLM is consulted only for near-ties inside a 0.02 margin. Corrections feed a Postgres-native job queue that reinforces each category's semantic anchors. The whole thing ships twice — a Next.js 16 web app and a native SwiftUI client — over one Supabase project, with everything the two share ported as pure, separately-tested functions.",
       result:
-        "A production-grade app on Next.js + Supabase: automatic categorization that improves itself, and a fault-tolerant background job system built entirely inside Postgres (pgmq, pg_cron, pg_net) — auth, RLS isolation, onboarding, search, and soft delete included.",
+        "A shipped product: live on the App Store as an offline-first native iOS app and on the web at petal-notes.com, built over ~20k lines of TypeScript and ~22k of Swift across 26 SQL migrations and 37 test suites. Categorization that improves with use while making almost no model calls, a fault-tolerant background job system living entirely inside Postgres, and a capture path engineered so a killed tab, a lost response, or a switched device doesn't cost you a thought.",
     },
     media: [
       {
@@ -144,6 +155,11 @@ export const projects: Project[] = [
       },
     ],
     links: [
+      {
+        label: "Download on the App Store",
+        href: "https://apps.apple.com/app/petal-notes/id6785715493",
+        kind: "appstore",
+      },
       { label: "petal-notes.com", href: "https://petal-notes.com", kind: "external" },
       // TODO: point at the dedicated Petal repo when it's public
       // (currently the GitHub profile).
@@ -374,6 +390,7 @@ export const projectTags: ProjectTag[] = [
   "Embedded",
   "ML",
   "Web",
+  "iOS",
   "Impact",
   "Research",
 ];

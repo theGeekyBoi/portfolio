@@ -12,7 +12,8 @@ export const about = {
   },
   paragraphs: [
     "I'm a Computer Engineering student at Virginia Tech (Honors College), concentrating in Controls, Robotics & Autonomy with a Machine Learning focus and a Computer Science minor.",
-    "I like building at the seam between hardware and software — an autonomous 3D print farm that calibrates itself with computer vision, a PCA pipeline rewritten in C to run on a microcontroller, an AI notes app whose entire job queue lives inside Postgres. Most recently I spent a summer at Micron building a change-point monitoring system that's now deployed globally across their fabs.",
+    "I like building at the seam between hardware and software — an autonomous 3D print farm that calibrates itself with computer vision, a PCA pipeline rewritten in C to run on a microcontroller, an AI notes app on the App Store whose entire job queue lives inside Postgres. Most recently I spent a summer at Micron building a change-point monitoring system that's now deployed globally across their fabs.",
+    "Outside of that, VT CRO has been the spine of my time here — I joined as a freshman engineer in 2023 and now run it as President, 140+ engineers across 12 teams. I'm also lead TA for ECE 4534, Virginia Tech's most advanced embedded systems course.",
     "Along the way I've picked up a peer-reviewed publication, pitched research to Nestlé, and taught 350+ students how to code and build robots.",
   ],
   // The last line of the About narrative, styled as a quiet sign-off.

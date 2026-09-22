@@ -8,7 +8,7 @@ export function Awards() {
   return (
     <section id="awards" className="scroll-mt-20 border-t border-line">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
-        <SectionHeading index="07" eyebrow="Recognition" title="Numbers & honors" />
+        <SectionHeading index="08" eyebrow="Recognition" title="Numbers & honors" />
 
         {/* Count-up stat cards */}
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
