@@ -178,7 +178,7 @@ export function VTCRO() {
               </p>
               <p className="mt-1 text-sm text-muted">
                 Gold Award + Honda Innovation Award at the National Robotics
-                Challenge 2025 · open-sourced and demoed at OpenSauce 2026.
+                Challenge 2025 · demoed at OpenSauce 2026.
               </p>
             </div>
             <span className="inline-flex items-center gap-1 text-sm font-medium text-accent">

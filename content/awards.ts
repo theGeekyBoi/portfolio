@@ -33,7 +33,7 @@ export const awards: Award[] = [
   },
   {
     title: "Exhibited at OpenSauce 2026",
-    detail: "WorkCell — public demo alongside the open-source launch",
+    detail: "WorkCell — public exhibit and live demo",
   },
   {
     title: "2nd Place — IEEE SoutheastCon Hardware Design Competition",

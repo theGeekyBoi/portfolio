@@ -82,7 +82,7 @@ export const projects: Project[] = [
       "Continuous print queue system for unattended printing — centralized queue management integrating print execution, automated part removal, and storage.",
       "Inventory-optimization algorithms that automate shelf-placement logic based on print-height constraints and real-time storage availability.",
       "Tight coordination of firmware, sensor/actuator control, communication protocols, backend software, and mechanical integration.",
-      "Took the project past competition as ECE & Software Lead — an open-source launch of the design, and a public demo at OpenSauce 2026.",
+      "Took the project past competition as ECE & Software Lead — exhibited it publicly at OpenSauce 2026, and is preparing the design for an open-source release targeted by the end of 2026.",
     ],
     caseStudy: {
       problem:
@@ -90,7 +90,7 @@ export const projects: Project[] = [
       approach:
         "Build the whole cell as a closed-loop system. A gantry serves dual printers; computer vision with AprilTags and dynamic camera tracking keeps the gantry calibrated automatically; a centralized queue coordinates print execution, automated part removal, and shelf storage.",
       result:
-        "0.2 mm gantry positioning accuracy from the vision-based auto-calibration. As an engineer on the team through the 2024–25 season, WorkCell took the Gold Award (Workcell category) and the Honda Innovation Award in Manufacturing at the National Robotics Challenge 2025. As ECE & Software Lead afterwards, the work shifted from competing to shipping: an open-source launch of the design and a public demo at OpenSauce 2026.",
+        "0.2 mm gantry positioning accuracy from the vision-based auto-calibration. As an engineer on the team through the 2024–25 season, WorkCell took the Gold Award (Workcell category) and the Honda Innovation Award in Manufacturing at the National Robotics Challenge 2025. As ECE & Software Lead afterwards, the work shifted from competing to sharing: a public demo at OpenSauce 2026, and an open-source release of the design being prepared for the end of 2026.",
     },
     media: [
       {
@@ -107,6 +107,21 @@ export const projects: Project[] = [
         type: "image",
         src: "/images/workcell-team.png",
         alt: "The VT CRO WorkCell team with the autonomous print farm at the National Robotics Challenge",
+      },
+      {
+        type: "image",
+        src: "/images/opensauce-team.jpg",
+        alt: "The VT CRO team with WorkCell running at their OpenSauce 2026 exhibit booth",
+      },
+      {
+        type: "image",
+        src: "/images/opensauce-print.jpg",
+        alt: "A part coming off WorkCell's print bed during the OpenSauce 2026 demo",
+      },
+      {
+        type: "image",
+        src: "/images/opensauce-booth.jpg",
+        alt: "Running the WorkCell demo station in front of the VT CRO backdrop at OpenSauce 2026",
       },
     ],
     links: [

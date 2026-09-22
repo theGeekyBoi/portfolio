@@ -83,8 +83,8 @@ export const vtcro = {
       dates: "2025 – Feb 2026",
       role: "ECE & Software Lead · VP of Engineering",
       team: "WorkCell · organization-wide",
-      body: "Took the electrical and software side of WorkCell as its lead after the competition season — owning the closed-loop vision calibration, the print queue, and the integration of firmware, backend, and mechanical systems — and drove the project past competition into an open-source launch and a public demo at OpenSauce. Stepped up to Vice President of Engineering (Aug 2025) with technical direction across every team.",
-      note: "Open-source launch · demoed at OpenSauce 2026",
+      body: "Took the electrical and software side of WorkCell as its lead after the competition season — owning the closed-loop vision calibration, the print queue, and the integration of firmware, backend, and mechanical systems — and drove the project past competition into a public demo at OpenSauce 2026, with an open-source release of the design in preparation. Stepped up to Vice President of Engineering (Aug 2025) with technical direction across every team.",
+      note: "Demoed at OpenSauce 2026",
     },
     {
       dates: "Feb 2026 – Present",

@@ -167,7 +167,7 @@ VT CRO is the **largest active ECE organization at Virginia Tech** and, since th
 
 - **Freshman year (SoutheastCon, 2023–24)** — joined as an engineer on the IEEE SoutheastCon hardware team, building the competition robot end to end (electronics, fabrication, debugging). **2nd place, Hardware Design Competition.**
 - **WorkCell engineer (2024–25)** — firmware, sensor/actuator control, and the communication layer tying gantry, printers, and storage together, through the competition season. **The Gold Award and Honda Innovation Award at the National Robotics Challenge 2025 were won during this period, as an engineer on the team** — not as its lead.
-- **WorkCell ECE & Software Lead (2025 – present)** — took the electrical and software side after the competition season: owned the closed-loop computer-vision calibration, the continuous print queue, and the integration of firmware, backend software, and mechanical systems. Under his lead the project moved past competition into an **open-source launch** and a **public demo at OpenSauce 2026**. (See §6.1.)
+- **WorkCell ECE & Software Lead (2025 – present)** — took the electrical and software side after the competition season: owned the closed-loop computer-vision calibration, the continuous print queue, and the integration of firmware, backend software, and mechanical systems. Under his lead the project moved past competition: a **public demo at OpenSauce 2026**, and an **open-source release of the design in preparation, targeted for the end of 2026**. (See §6.1.)
 - **VP of Engineering → President** — organizational strategy and technical vision across electrical, mechanical, and software systems; two full recruitment and onboarding cycles; multiple leadership transitions including his own handoff out of the VP seat; manages the organization's GitHub repositories and engineering workflow across all 12 teams.
 
 ### 4.2 Growth under his leadership
@@ -242,12 +242,12 @@ A fully custom, fully autonomous multi-printer 3D manufacturing workcell.
 
 **Two distinct phases — worth keeping straight on resumes and in interviews:**
 - **As an engineer (2024–25)** — built and competed. This is when the National Robotics Challenge awards were won.
-- **As ECE & Software Lead (2025 – present)** — took the project past competition: an **open-source launch** of the design and a **public demo at OpenSauce 2026**.
+- **As ECE & Software Lead (2025 – present)** — took the project past competition: a **public demo at OpenSauce 2026**, and an **open-source release of the design in preparation** (repo not public yet; launch targeted for the end of 2026).
 
 **Recognition:**
 - **Gold Award**, National Robotics Challenge 2025 (Workcell category) — *won as an engineer on the team*.
 - **Honda Innovation Award in Manufacturing**, National Robotics Challenge 2025 — *won as an engineer on the team*.
-- **Exhibited at OpenSauce 2026** — public demo alongside the open-source launch, as ECE & Software Lead.
+- **Exhibited at OpenSauce 2026** — public exhibit and live demo, as ECE & Software Lead. Photos in `Pictures/` and on the portfolio.
 
 ---
 
@@ -517,7 +517,7 @@ An autonomous rover that navigates to a goal in real time using only a top-down 
 **University & engineering**
 - **Gold Award**, National Robotics Challenge 2025 (Workcell category) — WorkCell.
 - **Honda Innovation Award in Manufacturing**, National Robotics Challenge 2025 — WorkCell.
-- **Exhibited at OpenSauce 2026** — WorkCell, public demo alongside the open-source launch.
+- **Exhibited at OpenSauce 2026** — WorkCell, public exhibit and live demo.
 - **2nd place**, IEEE SoutheastCon Hardware Design Competition (2024) — VT CRO SoutheastCon team.
 - **Best in Course** — Integrated Design Project (Spring 2025), Virginia Tech.
 - **Advanced Embedded Systems pilot cohort** selection, Virginia Tech — subsequently selected as **Lead TA** for the same course (ECE 4534).
@@ -726,8 +726,7 @@ Talks:
 
 ## 18. Open items / to confirm
 
-- **WorkCell open-source repository** — the design was open-sourced under his lead but no URL is recorded anywhere. Add it to §6.1 and to the project's links on the portfolio; it is the single strongest artifact for the lead phase of the project.
-- **OpenSauce 2026 demo** — add photos, video, or press from the exhibit; the portfolio currently asserts the demo without showing it.
+- **WorkCell open-source release** — *not public yet*; launch hoped for by the end of 2026. Nothing on the portfolio or in this file should describe it as already open-sourced until it lands. When it does: add the repo URL to §6.1, add it to the project's links, and change the phrasing from "in preparation" to shipped.
 - **Petal metrics worth tracking now that it's shipped** — downloads, retention, crash-free rate, App Store rating, and any user feedback themes. None of these exist in this file yet and they are the numbers that make a shipped product persuasive.
 - **Petal repository** — the portfolio currently links the GitHub profile rather than a dedicated Petal repo; add the repo URL if/when it goes public.
 - **EmbArch outcomes** — the first ECE-only VT CRO team, launched with ECE 4534 and Dr. Nazhandali. Record its size, first-semester deliverable, and whether other courses have followed the template.
