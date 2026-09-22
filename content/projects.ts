@@ -68,7 +68,7 @@ export const projects: Project[] = [
     subtitle: "Autonomous 3D print farm",
     featured: true,
     tags: ["Robotics", "Embedded"],
-    role: "ECE & Software Lead · VT CRO",
+    role: "Engineer → ECE & Software Lead · VT CRO",
     dates: "Aug 2024 – Present",
     summary:
       "A fully custom, fully autonomous multi-printer 3D manufacturing workcell — dual printers, plate swapping, storage automation, and a continuous print queue.",
@@ -82,6 +82,7 @@ export const projects: Project[] = [
       "Continuous print queue system for unattended printing — centralized queue management integrating print execution, automated part removal, and storage.",
       "Inventory-optimization algorithms that automate shelf-placement logic based on print-height constraints and real-time storage availability.",
       "Tight coordination of firmware, sensor/actuator control, communication protocols, backend software, and mechanical integration.",
+      "Took the project past competition as ECE & Software Lead — an open-source launch of the design, and a public demo at OpenSauce 2026.",
     ],
     caseStudy: {
       problem:
@@ -89,7 +90,7 @@ export const projects: Project[] = [
       approach:
         "Build the whole cell as a closed-loop system. A gantry serves dual printers; computer vision with AprilTags and dynamic camera tracking keeps the gantry calibrated automatically; a centralized queue coordinates print execution, automated part removal, and shelf storage.",
       result:
-        "0.2 mm gantry positioning accuracy from the vision-based auto-calibration. Gold Award (Workcell category) and the Honda Innovation Award in Manufacturing at the National Robotics Challenge 2025, and selected to exhibit at OpenSauce 2026.",
+        "0.2 mm gantry positioning accuracy from the vision-based auto-calibration. As an engineer on the team through the 2024–25 season, WorkCell took the Gold Award (Workcell category) and the Honda Innovation Award in Manufacturing at the National Robotics Challenge 2025. As ECE & Software Lead afterwards, the work shifted from competing to shipping: an open-source launch of the design and a public demo at OpenSauce 2026.",
     },
     media: [
       {
@@ -108,6 +109,13 @@ export const projects: Project[] = [
         alt: "The VT CRO WorkCell team with the autonomous print farm at the National Robotics Challenge",
       },
     ],
+    links: [
+      {
+        label: "Watch the demo",
+        href: "https://www.youtube.com/watch?v=6d8gg3khpiE",
+        kind: "external",
+      },
+    ],
     // TODO: add the VT News article URL when available (master profile §18).
   },
   // --------------------------------------------------------------------------
@@ -120,7 +128,7 @@ export const projects: Project[] = [
     role: "Founder & Full-Stack Developer",
     dates: "May 2026 – Present",
     summary:
-      "A private, AI-assisted notes app shipping as two first-class clients — a native SwiftUI iOS app on the App Store and a Next.js web app — on one Supabase backend. Notes sort themselves by meaning, and the system gets more accurate every time you correct it.",
+      "A private AI notes app that files entries by meaning — shipping as a native SwiftUI iOS app on the App Store and a Next.js web app on one Supabase backend.",
     metrics: [
       { value: "iOS + Web", label: "two native clients, one Postgres backend" },
       { value: "1536-dim", label: "pgvector embeddings behind Smart Sort" },
@@ -156,7 +164,7 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        label: "Download on the App Store",
+        label: "App Store",
         href: "https://apps.apple.com/app/petal-notes/id6785715493",
         kind: "appstore",
       },

@@ -55,11 +55,12 @@ export const vtcro = {
       { label: "Engineers", before: "~75", after: "140+" },
       { label: "Teams", before: "5", after: "12 (7 design · 5 support)" },
       { label: "K-12 students reached / yr", before: "670", after: "1,600+" },
+      { label: "Lab spaces", before: "2", after: "4" },
     ] as GrowthRow[],
     funding: {
-      value: "$32,500",
+      value: "$65,000+",
       label:
-        "secured in funding, plus the physical space to sustain the growth — both were fights, and both were won in time to matter.",
+        "raised as President, alongside the additional lab space needed to sustain that growth.",
     },
   },
 
@@ -75,20 +76,21 @@ export const vtcro = {
       dates: "Aug 2024 – 2025",
       role: "Engineer",
       team: "WorkCell",
-      body: "Moved onto WorkCell, the organization's autonomous multi-printer 3D manufacturing cell — working across firmware, sensor and actuator control, and the communication layer tying the gantry, printers, and storage together.",
+      body: "Moved onto WorkCell, the organization's autonomous multi-printer 3D manufacturing cell — working across firmware, sensor and actuator control, and the communication layer tying the gantry, printers, and storage together, through the competition season that took it to nationals.",
+      note: "Gold Award + Honda Innovation Award — National Robotics Challenge 2025",
     },
     {
       dates: "2025 – Feb 2026",
       role: "ECE & Software Lead · VP of Engineering",
       team: "WorkCell · organization-wide",
-      body: "Took the electrical and software side of WorkCell as its lead — owning the closed-loop vision calibration, the print queue, and the integration of firmware, backend, and mechanical systems — and stepped up to Vice President of Engineering (Aug 2025) with technical direction across every team.",
-      note: "Gold Award + Honda Innovation Award, National Robotics Challenge",
+      body: "Took the electrical and software side of WorkCell as its lead after the competition season — owning the closed-loop vision calibration, the print queue, and the integration of firmware, backend, and mechanical systems — and drove the project past competition into an open-source launch and a public demo at OpenSauce. Stepped up to Vice President of Engineering (Aug 2025) with technical direction across every team.",
+      note: "Open-source launch · demoed at OpenSauce 2026",
     },
     {
       dates: "Feb 2026 – Present",
       role: "President",
       team: "140+ engineers · 12 teams",
-      body: "Runs the whole organization: strategy, technical vision, funding, space, recruitment, and the leadership transitions that keep it alive year over year — including my own handoff out of the VP seat. Also manages the GitHub repositories and engineering workflow across all 12 teams.",
+      body: "Runs the whole organization: strategy, technical vision, funding, space, recruitment, and the leadership transitions that keep it alive year over year — including my own handoff out of the VP seat. Raised over $65,000 in this term and took the organization from two lab spaces to four; also manages the GitHub repositories and engineering workflow across all 12 teams.",
     },
   ] as JourneyStage[],
 
@@ -103,7 +105,7 @@ export const vtcro = {
     },
     {
       title: "Turned funding into capacity",
-      body: "The $32,500 and the additional lab space weren't ends in themselves — they're what let the organization absorb nearly twice as many engineers without the experience degrading for the students already here.",
+      body: "The $65,000+ raised and the expansion from two lab spaces to four weren't ends in themselves — they're what let the organization absorb nearly twice as many engineers without the experience degrading for the students already here.",
     },
     {
       title: "Widened the pipeline into ECE",

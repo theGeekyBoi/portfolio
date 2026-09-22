@@ -177,8 +177,8 @@ export function VTCRO() {
                 WorkCell — autonomous 3D print farm
               </p>
               <p className="mt-1 text-sm text-muted">
-                Gold Award + Honda Innovation Award, National Robotics Challenge
-                2025 · exhibiting at OpenSauce 2026.
+                Gold Award + Honda Innovation Award at the National Robotics
+                Challenge 2025 · open-sourced and demoed at OpenSauce 2026.
               </p>
             </div>
             <span className="inline-flex items-center gap-1 text-sm font-medium text-accent">

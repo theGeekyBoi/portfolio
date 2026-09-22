@@ -166,8 +166,8 @@ VT CRO is the **largest active ECE organization at Virginia Tech** and, since th
 > **Resume shorthand:** "President, VT CRO (current)" is sufficient on most resumes; the full progression above is recorded here for completeness and for any application that rewards demonstrated growth.
 
 - **Freshman year (SoutheastCon, 2023–24)** — joined as an engineer on the IEEE SoutheastCon hardware team, building the competition robot end to end (electronics, fabrication, debugging). **2nd place, Hardware Design Competition.**
-- **WorkCell engineer (2024–25)** — firmware, sensor/actuator control, and the communication layer tying gantry, printers, and storage together.
-- **WorkCell ECE & Software Lead** — owned the closed-loop computer-vision calibration, the continuous print queue, and the integration of firmware, backend software, and mechanical systems. Gold Award + Honda Innovation Award at the National Robotics Challenge; selected to exhibit at OpenSauce 2026. (See §6.1.)
+- **WorkCell engineer (2024–25)** — firmware, sensor/actuator control, and the communication layer tying gantry, printers, and storage together, through the competition season. **The Gold Award and Honda Innovation Award at the National Robotics Challenge 2025 were won during this period, as an engineer on the team** — not as its lead.
+- **WorkCell ECE & Software Lead (2025 – present)** — took the electrical and software side after the competition season: owned the closed-loop computer-vision calibration, the continuous print queue, and the integration of firmware, backend software, and mechanical systems. Under his lead the project moved past competition into an **open-source launch** and a **public demo at OpenSauce 2026**. (See §6.1.)
 - **VP of Engineering → President** — organizational strategy and technical vision across electrical, mechanical, and software systems; two full recruitment and onboarding cycles; multiple leadership transitions including his own handoff out of the VP seat; manages the organization's GitHub repositories and engineering workflow across all 12 teams.
 
 ### 4.2 Growth under his leadership
@@ -179,8 +179,9 @@ The clearest measure is the organization before he stepped into leadership (Aug 
 | Engineers | ~75 | **140+** |
 | Teams | 5 | **12** (7 design, 5 support) |
 | K-12 students reached / yr | 670 | **1,600+** |
+| Lab spaces | 2 | **4** |
 
-- **Secured $32,500 in funding**, with the support of Department Head Dr. Rose Qingyang Hu, plus the physical space needed to sustain that growth. Both were fights, and both were won in time to matter.
+- **Raised over $65,000 as President** (initially $32,500 secured with the support of Department Head Dr. Rose Qingyang Hu), plus the physical space needed to sustain that growth — the organization went from **2 lab spaces to 4**.
 - **Structure beyond competition** — innovation, catering, startup, and product-based teams now sit alongside the traditional design teams.
 
 ### 4.3 What it changed for the Bradley Department
@@ -188,7 +189,7 @@ The clearest measure is the organization before he stepped into leadership (Aug 
 - **Built the curriculum into the organization** — helped launch **EmbArch**, VT CRO's first ECE-only team: an advanced embedded architecture team created in collaboration with **ECE 4534 (Embedded System Design)** and **Dr. Leyla Nazhandali**. It gives students a direct path from a departmental course into a working engineering team, and is a template other courses could follow.
 - **Represented the department externally** — presentations and pitches to distinguished ECE alumni, talks at department events about the robotics community being built at VT, and hosting visitors and alumni in the lab spaces.
 - **Widened the pipeline into ECE** — K-12 outreach grew from 670 students a year to more than 1,600, reaching students well before they choose a major.
-- **Turned funding into capacity** — the $32,500 and the additional space let the organization absorb nearly twice as many engineers without the experience degrading for the students already there.
+- **Turned funding into capacity** — the $65,000+ raised and the expansion from two lab spaces to four let the organization absorb nearly twice as many engineers without the experience degrading for the students already there.
 
 Org website: vtcro.org
 
@@ -224,7 +225,7 @@ ECE 4534 is Virginia Tech's most advanced embedded systems course, and roughly *
 ## 6. Projects
 
 ### 6.1 WorkCell (WorkCell 26) — Autonomous 3D Print Farm
-*Role: ECE & Software Lead · VT CRO · Aug 2024 – Present · (VT News article exists)*
+*Role: Engineer (Aug 2024 – 2025) → ECE & Software Lead (2025 – present) · VT CRO · (VT News article exists)*
 
 A fully custom, fully autonomous multi-printer 3D manufacturing workcell.
 
@@ -239,10 +240,14 @@ A fully custom, fully autonomous multi-printer 3D manufacturing workcell.
 - **Inventory-optimization algorithms** — automate shelf-placement logic based on print-height constraints and real-time storage availability.
 - Required tight coordination of **firmware, sensor/actuator control, communication protocols, backend software, and mechanical integration**.
 
+**Two distinct phases — worth keeping straight on resumes and in interviews:**
+- **As an engineer (2024–25)** — built and competed. This is when the National Robotics Challenge awards were won.
+- **As ECE & Software Lead (2025 – present)** — took the project past competition: an **open-source launch** of the design and a **public demo at OpenSauce 2026**.
+
 **Recognition:**
-- **Gold Award**, National Robotics Challenge 2025 (Workcell category).
-- **Honda Innovation Award in Manufacturing**, National Robotics Challenge 2025.
-- **Selected to exhibit at OpenSauce 2026.**
+- **Gold Award**, National Robotics Challenge 2025 (Workcell category) — *won as an engineer on the team*.
+- **Honda Innovation Award in Manufacturing**, National Robotics Challenge 2025 — *won as an engineer on the team*.
+- **Exhibited at OpenSauce 2026** — public demo alongside the open-source launch, as ECE & Software Lead.
 
 ---
 
@@ -512,7 +517,7 @@ An autonomous rover that navigates to a goal in real time using only a top-down 
 **University & engineering**
 - **Gold Award**, National Robotics Challenge 2025 (Workcell category) — WorkCell.
 - **Honda Innovation Award in Manufacturing**, National Robotics Challenge 2025 — WorkCell.
-- **Selected to exhibit at OpenSauce 2026** — WorkCell.
+- **Exhibited at OpenSauce 2026** — WorkCell, public demo alongside the open-source launch.
 - **2nd place**, IEEE SoutheastCon Hardware Design Competition (2024) — VT CRO SoutheastCon team.
 - **Best in Course** — Integrated Design Project (Spring 2025), Virginia Tech.
 - **Advanced Embedded Systems pilot cohort** selection, Virginia Tech — subsequently selected as **Lead TA** for the same course (ECE 4534).
@@ -681,7 +686,7 @@ Talks:
 
 - **Strongest differentiators:** the WorkCell autonomous print farm (award-winning, real hardware + software + computer-vision systems integration); Petal, an AI notes product shipped on the App Store and the web from one backend, with a hybrid vector categorizer that learns from corrections and an all-in-Postgres job queue (rare, systems-level talking points); and the PCA Framework (from-scratch numerical methods in C + embedded deployment + measurable 4–5× speedup).
 - **Profile breadth:** spans embedded/firmware, robotics/autonomy, data/ML (Micron + ARIMA + PCA), full-stack web + native iOS + applied AI (Petal), plus teaching and large-scale technical leadership (140+ engineers).
-- **Leadership arc worth telling in full:** four years at VT CRO from freshman SoutheastCon engineer → WorkCell engineer → WorkCell ECE & Software Lead → VP of Engineering → President, with the organization roughly doubling (75 → 140+ engineers, 5 → 12 teams) and $32,500 secured under his leadership. Few undergraduate applicants can show both the technical depth and the institutional growth in one story.
+- **Leadership arc worth telling in full:** four years at VT CRO from freshman SoutheastCon engineer → WorkCell engineer → WorkCell ECE & Software Lead → VP of Engineering → President, with the organization roughly doubling (75 → 140+ engineers, 5 → 12 teams) and $65,000+ raised under his leadership. Few undergraduate applicants can show both the technical depth and the institutional growth in one story.
 - **Teaching depth:** Lead TA for ECE 4534, the department's most advanced embedded course — writes assignments, helps teach, and owns the project track that is ~70% of the grade.
 - **Versatile target roles:** embedded/firmware engineering, robotics/autonomy, software engineering (full-stack), and ML/data — the material can be reweighted toward any of these.
 - **Research credibility:** a peer-reviewed publication, a funded innovation award, and a Nestlé industry collaboration (MADS) are unusual for an undergraduate and signal independent research ability.
@@ -709,7 +714,7 @@ Talks:
 | Flagship project 1 | WorkCell — autonomous 3D print farm (Gold + Honda award) |
 | Flagship project 2 | Petal — AI notes app **shipped on the App Store** + web (vector + LLM, all-in-Postgres) |
 | Shipped to users | Petal iOS — apps.apple.com/app/petal-notes/id6785715493 · petal-notes.com |
-| Leadership headline | President, VT CRO — 140+ engineers, 12 teams, $32,500 secured; four-year progression from freshman engineer |
+| Leadership headline | President, VT CRO — 140+ engineers, 12 teams, $65,000+ raised, 2 → 4 lab spaces; four-year progression from freshman engineer |
 | Teaching headline | Lead TA, ECE 4534 (Embedded System Design) — syllabus, assignments, and the project track |
 | Flagship project 3 | PCA Framework — C-native PCA for embedded device auth |
 | Flagship project 4 | BirdsEye — vision-based autonomous rover, sim-to-real RL (Team Lead & Lead Programmer) |
@@ -721,7 +726,8 @@ Talks:
 
 ## 18. Open items / to confirm
 
-- **WorkCell ECE & Software Lead start date** — the portfolio project page says Aug 2024 – Present, while the role progression is written as Engineer (Aug 2024 – 2025) → ECE & Software Lead (2025 – Feb 2026). Confirm when the lead role actually began and align §4.1 with `content/vtcro.ts` and `content/experience.ts`.
+- **WorkCell open-source repository** — the design was open-sourced under his lead but no URL is recorded anywhere. Add it to §6.1 and to the project's links on the portfolio; it is the single strongest artifact for the lead phase of the project.
+- **OpenSauce 2026 demo** — add photos, video, or press from the exhibit; the portfolio currently asserts the demo without showing it.
 - **Petal metrics worth tracking now that it's shipped** — downloads, retention, crash-free rate, App Store rating, and any user feedback themes. None of these exist in this file yet and they are the numbers that make a shipped product persuasive.
 - **Petal repository** — the portfolio currently links the GitHub profile rather than a dedicated Petal repo; add the repo URL if/when it goes public.
 - **EmbArch outcomes** — the first ECE-only VT CRO team, launched with ECE 4534 and Dr. Nazhandali. Record its size, first-semester deliverable, and whether other courses have followed the template.

@@ -38,7 +38,7 @@ export const experience: Experience[] = [
     ],
     bullets: [
       "Leads 140+ engineers across 12 teams (7 design, 5 support) at Virginia Tech's largest active ECE organization — grown from ~75 engineers and 5 teams since stepping into leadership in Aug 2025.",
-      "Secured $32,500 in funding and the physical lab space needed to absorb that growth without degrading the experience for the engineers already there.",
+      "Raised over $65,000 as President and grew the organization from two lab spaces to four — the capacity needed to absorb that growth without degrading the experience for the engineers already there.",
       "Helped launch EmbArch, VT CRO's first ECE-only team — an advanced embedded architecture team created with ECE 4534 and Dr. Leyla Nazhandali, giving students a direct path from a departmental course into a working engineering team.",
       "Grew K-12 outreach from 670 students a year to 1,600+, and represents the Bradley Department to distinguished alumni, visitors, and department events.",
       "ECE & Software Lead for WorkCell, the award-winning autonomous 3D print farm; manages GitHub repositories and engineering workflow across all 12 teams.",

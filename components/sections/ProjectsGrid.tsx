@@ -52,7 +52,13 @@ export function ProjectsGrid() {
           ))}
         </div>
 
-        <motion.ul layout={!reduceMotion} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* items-start: cards size to their content. Stretching them to the
+            tallest card in the row left short ones with a hole above the
+            footer, which read as an empty tile. */}
+        <motion.ul
+          layout={!reduceMotion}
+          className="grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-3"
+        >
           <AnimatePresence mode="popLayout" initial={false}>
             {visible.map((project) => (
               <motion.li

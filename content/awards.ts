@@ -32,8 +32,8 @@ export const awards: Award[] = [
     detail: "National Robotics Challenge 2025 · WorkCell",
   },
   {
-    title: "Selected to exhibit at OpenSauce 2026",
-    detail: "WorkCell",
+    title: "Exhibited at OpenSauce 2026",
+    detail: "WorkCell — public demo alongside the open-source launch",
   },
   {
     title: "2nd Place — IEEE SoutheastCon Hardware Design Competition",
