@@ -21,14 +21,10 @@ const mono = IBM_Plex_Mono({
 });
 
 // Base URL for absolute metadata (Open Graph / preview image) URLs.
-// On Vercel this resolves to the production domain automatically; locally it
-// falls back to localhost. Set NEXT_PUBLIC_SITE_URL to force a custom domain.
-const metadataBase = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL ??
-    (process.env.VERCEL_PROJECT_PRODUCTION_URL
-      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : "http://localhost:3000")
-);
+// Defaults to the canonical domain in content/site.ts so preview cards point
+// at aadityasharma.net rather than a deploy-specific vercel.app hostname.
+// Set NEXT_PUBLIC_SITE_URL to override (e.g. for a preview deployment).
+const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? site.url);
 
 const pageTitle = `${site.name} — ${site.tagline}`;
 

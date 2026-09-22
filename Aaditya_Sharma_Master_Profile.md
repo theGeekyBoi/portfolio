@@ -20,7 +20,7 @@
 | Full name | Aaditya Sharma |
 | Phone | 540 605 0172 |
 | Email | aaditya07@vt.edu |
-| Portfolio | Next.js portfolio in `theGeekyBoi/portfolio`, deployed on Vercel *(the older `aadityasharma.lovable.app` link is stale — confirm the live domain, see §18)* |
+| Portfolio | **aadityasharma.net** — Next.js site in `theGeekyBoi/portfolio`, deployed on Vercel *(the older `aadityasharma.lovable.app` link still redirects here, but `aadityasharma.net` is the one to use everywhere)* |
 | Shipped product | Petal — `petal-notes.com` (web) · `apps.apple.com/app/petal-notes/id6785715493` (iOS) |
 | LinkedIn | linkedin.com/in/aaditya-sharma-0611002b1 |
 | GitHub | github.com/theGeekyBoi |
@@ -721,7 +721,6 @@ Talks:
 
 ## 18. Open items / to confirm
 
-- **Live portfolio domain** — §1 previously listed `aadityasharma.lovable.app`, which predates the current Next.js site (`theGeekyBoi/portfolio`, Vercel). Confirm and record the production domain.
 - **WorkCell ECE & Software Lead start date** — the portfolio project page says Aug 2024 – Present, while the role progression is written as Engineer (Aug 2024 – 2025) → ECE & Software Lead (2025 – Feb 2026). Confirm when the lead role actually began and align §4.1 with `content/vtcro.ts` and `content/experience.ts`.
 - **Petal metrics worth tracking now that it's shipped** — downloads, retention, crash-free rate, App Store rating, and any user feedback themes. None of these exist in this file yet and they are the numbers that make a shipped product persuasive.
 - **Petal repository** — the portfolio currently links the GitHub profile rather than a dedicated Petal repo; add the repo URL if/when it goes public.

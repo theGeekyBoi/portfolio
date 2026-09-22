@@ -15,6 +15,10 @@ export const site = {
   currently:
     "Currently: President of VT CRO · lead TA for ECE 4534 · senior year · having fun",
 
+  // Canonical production domain. Used as the base for absolute metadata
+  // (Open Graph / preview image) URLs; override with NEXT_PUBLIC_SITE_URL.
+  url: "https://www.aadityasharma.net",
+
   email: "aaditya07@vt.edu",
 
   socials: {
